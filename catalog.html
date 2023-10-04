@@ -7,51 +7,55 @@
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="header">
       <h1 class="visually-hidden">Device</h1>
-      <!-- лого -->
-      <a href="https://htmlacademy.ru">
+      <a href="index.html">
         <img class="logo" src="img/#!.svg" width="#" height="#" alt="Логотип сайта Device">
       </a>
-      <!-- форма -->
       <form action="#!" method="post">
         <input type="text" placeholder="Поиск по сайту">
         <button type="submit">Найти</button>
       </form>
-
-      <ul class="page-header-link">
-        <li class="page-header-link-item">
-          <a href="#!">Войти</a>
+      <ul class="header-list">
+        <li class="header-item">
+          <a class="header-link" href="#!">Коля Петухов</a>
         </li>
-        <li class="page-header-link-item">
-          <a href="#!">Корзина</a>
+        <li class="header-item">
+          <a class="header-link" href="#!">Зайти</a>
+          <a class="header-link" href="#!">Выйти</a>
+        </li>
+        <li class="header-item">
+          <a class="header-link" href="#!">Сравнить</a>
+        </li>
+        <li class="header-item">
+          <a class="header-link" href="#!">Корзина</a>
         </li>
       </ul>
       <!-- навигация -->
       <nav class="navigation">
         <details class="navigation-catalog">
           <summary class="catalog-menu-opener">Каталог товаров</summary>
-          <ul class="menu-opener">
-            <li class="menu-opener-item">
+          <ul class="navigation-catalog-list">
+            <li class="navigation-catalog-item">
               <a class="navigation-link" href="catalog.html">Виртуальная реальность</a>
             </li>
-            <li class="menu-opener-item">
+            <li class="navigation-catalog-item">
               <a class="navigation-link" href="catalog.html">Моноподы для cелфи</a>
             </li>
-            <li class="menu-opener-item">
+            <li class="navigation-catalog-item">
               <a class="navigation-link" href="catalog.html">Экшн-камеры</a>
             </li>
           </ul>
-          <ul class="menu-opener">
-            <li class="menu-opener-item">
+          <ul class="navigation-catalog-list">
+            <li class="navigation-catalog-item">
               <a class="navigation-link" href="catalog.html">Фитнес-браслеты</a>
             </li>
-            <li class="menu-opener-item">
+            <li class="navigation-catalog-item">
               <a class="navigation-link" href="catalog.html">Умные часы</a>
             </li>
           </ul>
-          <ul class="menu-opener">
-            <li class="menu-opener-item">
+          <ul class="navigation-catalog-list">
+            <li class="navigation-catalog-item">
               <a class="navigation-link" href="catalog.html">Квадрокоптеры</a>
             </li>
           </ul>
@@ -98,27 +102,32 @@
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="black" checked>Черный
+                  <input class="control-input" type="checkbox" name="color" value="black" checked>
+                  Черный
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="white" checked>Белый
+                  <input class="control-input" type="checkbox" name="color" value="white" checked>
+                  Белый
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="blue">Синий
+                  <input class="control-input" type="checkbox" name="color" value="blue">
+                  Синий
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="red">Красный
+                  <input class="control-input" type="checkbox" name="color" value="red">
+                  Красный
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="pink">Розовый
+                  <input class="control-input" type="checkbox" name="color" value="pink">
+                  Розовый
                 </label>
               </li>
             </ul>
@@ -128,12 +137,14 @@
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="yes" checked>Есть
+                  <input class="control-input" type="radio" name="product-group" value="yes" checked>
+                  Есть
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="no">Нет
+                  <input class="control-input" type="radio" name="product-group" value="no">
+                  Нет
                 </label>
               </li>
             </ul>
@@ -148,6 +159,14 @@
             <option value="cheap">Сначала дешёвое</option>
             <option value="expensive">Сначала дорогое</option>
           </select>
+          <ul class="sort-list">
+            <li class="sort-item">
+              <a class="visually-hidden" href="#!">по возрастанию</a>
+            </li>
+            <li class="sort-item">
+              <a class="visually-hidden" href="#!">по убыванию</a>
+            </li>
+          </ul>
         </div>
         <!-- Карточки -->
         <ul class="product-list">
@@ -181,18 +200,10 @@
           </li>
         </ul>
         <button class="button pagination-show-more" type="button">Загрузить ещё</button>
-        <ul class="sort">
-          <li class="sort-list">
-            <a class="visually-hidden" href="#!">по возрастанию</a>
-          </li>
-          <li class="sort-list">
-            <a class="visually-hidden" href="#!">по убыванию</a>
-          </li>
-        </ul>
         <!-- Пагинация -->
-        <ul class="pagination">
+        <ol class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-prev pagination-disabled"></a>
+            <a class="pagination-link pagination-prev pagination-disabled">Назад</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -212,8 +223,7 @@
           <li class="pagination-item">
             <a class="pagination-link pagination-next" href="#!"></a>
           </li>
-        </ul>
-        <button class="button pagination-show-more" type="button">Загрузить ещё</button>
+        </ol>
       </section>
     </main>
     <!-- ФУТЕР -->
