@@ -1,7 +1,8 @@
 # Личный проект «Девайс»
 
 * Студент: [Ирина Лущикова](https://up.htmlacademy.ru/htmlcss-individual/1/user/2305261).
-* Наставник: Андрей Ефимов.
+* Наставник: [Андрей Ефимов](https://htmlacademy.ru/profile/id367335).
+
 
 ---
 
