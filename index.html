@@ -17,13 +17,13 @@
         <button type="submit">Найти</button>
       </form>
       <ul class="header-list">
-        <li class="header-item">
+        <li class="header-list-item">
           <a class="header-link" href="#!">Войти</a>
         </li>
-        <li class="header-item">
+        <li class="header-list-item">
           <a class="header-link" href="#!">Сравнить</a>
         </li>
-        <li class="header-item">
+        <li class="header-list-item">
           <a class="header-link" href="#!">Корзина</a>
         </li>
       </ul>
@@ -76,64 +76,67 @@
           <div class="slider-wrapper">
             <div class="slider-controls">
               <button class="slider-button slider-next" type="button">
-                <span class="visually-hidden">Предыдущая карточка</span>
+                <span class="visually-hidden">левая стрелка</span>
               </button>
               <button class="slider-button slider-prev" type="button">
-                <span class="visually-hidden">Следующая карточка</span>
+                <span class="visually-hidden">правая стрелка</span>
               </button>
             </div>
             <!-- карточки слайера -->
             <ul class="slider-order">
               <li class="slider-order-item">
-                <h2>Порхает как бабочка, жалит как пчела!</h2>
-                <p>Этот обычный, на первый взгляд, квадрокоптер оснащен
+                <h2 class="slider-order-title">Порхает как бабочка, жалит как пчела!</h2>
+                <p class="slider-order-text">Этот обычный, на первый взгляд, квадрокоптер оснащен
                   мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <a class="slider-order-link" href="#!">подробнее</a>
+                <a class="slider-order-link button" href="#!">подробнее</a>
                 <dl class="slider-order-property">
                   <dt class="property-key">800 м</dt>
-                  <dd class="slider-value">Дальность полета</dd>
+                  <dd class="property-value">Дальность полета</dd>
                   <dt class="property-key">50 м</dt>
-                  <dd class="slider-value">Радиус поражения</dd>
+                  <dd class="property-value">Радиус поражения</dd>
                 </dl>
               </li>
               <li class="slider-order-item">
-                <h2>Худеем правильно!</h2>
-                <p>Мотивирующие фитнес-браслеты помогут найти в себе
+                <h2 class="slider-order-title">Худеем правильно!</h2>
+                <p class="slider-order-text">Мотивирующие фитнес-браслеты помогут найти в себе
                   силы не пропускать занятия и соблюдать диету.</p>
-                <a class="slider-order-link" href="#!">подробнее</a>
+                <a class="slider-order-link button" href="#!">подробнее</a>
                 <dl class="slider-order-property">
                   <dt class="property-key">48 часов</dt>
-                  <dd class="slider-value">Без подзарядки</dd>
+                  <dd class="property-value">Без подзарядки</dd>
                 </dl>
               </li>
               <li class="slider-order-item">
-                <h2>Делай селфи, как Бен Стиллер!</h2>
-                <p>Самая длинная палка для селфи доступна в нашем магазине.
+                <h2 class="slider-order-title">Делай селфи, как Бен Стиллер!</h2>
+                <p class="slider-order-text">Самая длинная палка для селфи доступна в нашем магазине.
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-                <a class="slider-order-link" href="#!">подробнее</a>
+                <a class="slider-order-link button" href="#!">подробнее</a>
                 <dl class="slider-order-property">
                   <dt class="property-key">8,5</dt>
-                  <dd class="slider-value">Длина палки</dd>
+                  <dd class="property-value">Длина палки</dd>
                   <dt class="property-key">5 кг</dt>
-                  <dd class="slider-value">Вес палки</dd>
+                  <dd class="property-value">Вес палки</dd>
                   <dt class="property-key">Карбон</dt>
-                  <dd class="slider-value">Материал</dd>
+                  <dd class="property-value">Материал</dd>
                 </dl>
               </li>
             </ul>
             <ul class="slider-dots">
               <li class="slider-dots-item">
-                <button class="slider-dots-button slider-dots-button-current" type="button"></button>
-                <span class="visually-hidden">первый</span>
+                <button class="slider-dots-button slider-dots-button-current visually-hidden" type="button">
+                  первый
+                </button>
               </li>
               <li class="slider-dots-item">
-                <button class="slider-dots-button" type="button"></button>
-                <span class="visually-hidden">второй</span>
+                <button class="slider-dots-button visually-hidden" type="button">
+                  второй
+                </button>
               </li>
               <li class="slider-dots-item">
-                <button class="slider-dots-button" type="button"></button>
-                <span class="visually-hidden">третий</span>
+                <button class="slider-dots-button visually-hidden" type="button">
+                  третий
+                </button>
               </li>
             </ul>
           </div>
@@ -163,34 +166,42 @@
         </ul>
       </section>
       <!-- ДОСТАВКА ГАРАНТИЯ КРЕДИТ-->
-      <section class="delivery">
-        <ul class="delivery-list">
-          <li class="delivery-button">
-            <h2 class="delivery-button-title">Доставка</h2>
-            <p>Мы с удовольствием доставим ваш товар прямо
-              к вашему подъезду совершенно бесплатно! Ведь
-              мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            <button class="button" type="button">доставка</button>
+      <section class="cervices">
+        <ul class="tabs">
+          <li class="tabs-button">
+            <button class="button button-current" type="button">доставка</button>
           </li>
-          <li class="delivery-button">
-            <h2 class="delivery-button-title">Гарантия</h2>
-            <p>Если из-за возгорания купленного у нас товара у вас
-              сгорит дом — не переживайте, мы выдадим вам новый.
-              Товар, не дом, конечно же.</p>
+          <li class="tabs-button">
             <button class="button" type="button">гарантия</button>
           </li>
-          <li class="delivery-button">
-            <h2 class="delivery-button-title">Кредит</h2>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты
-              подберут для вас наиболее выгодные условия кредита. Выгодные
-              для банка, разумеется.</p>
+          <li class="tabs-button">
             <button class="button" type="button">кредит</button>
           </li>
         </ul>
-        <button type="submit">Доставим редкий товар под заказ</button>
+        <ul class="tabs-contens">
+          <li class="tabs-contens-item">
+            <h2 class="tabs-contens-title">Доставка</h2>
+            <p class="tabs-contens-text">Мы с удовольствием доставим ваш товар прямо
+              к вашему подъезду совершенно бесплатно! Ведь
+              мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </li>
+          <li class="tabs-contens-item">
+            <h2 class="tabs-contens-title">Гарантия</h2>
+            <p class="tabs-contens-text">Если из-за возгорания купленного у нас товара у вас
+              сгорит дом — не переживайте, мы выдадим вам новый.
+              Товар, не дом, конечно же.</p>
+          </li>
+          <li class="tabs-contens-item">
+            <h2 class="tabs-contens-title">Кредит</h2>
+            <p class="tabs-contens-text">Залезть в долговую яму стало проще! Кредитные консультанты
+              подберут для вас наиболее выгодные условия кредита. Выгодные
+              для банка, разумеется.</p>
+          </li>
+        </ul>
+        <button type="button">Доставим редкий товар под заказ</button>
       </section>
       <!-- О НАС и КОНТАКТЫ -->
-      <div class="main-content">
+      <div class="info-content">
         <section class="content-left">
           <h2 class="content-title">О нас</h2>
           <p class="content-text">Огромный выбор гаджетов не оставит равнодушным гика,

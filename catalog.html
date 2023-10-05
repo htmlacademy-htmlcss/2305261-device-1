@@ -17,14 +17,13 @@
         <button type="submit">Найти</button>
       </form>
       <ul class="header-list">
-        <li class="header-item">
+        <li class="header-list-item">
           <a class="header-link" href="#!">Коля Петухов</a>
         </li>
-        <li class="header-item">
-          <a class="header-link" href="#!">Зайти</a>
+        <li class="header-list-item">
           <a class="header-link" href="#!">Выйти</a>
         </li>
-        <li class="header-item">
+        <li class="header-list-item">
           <a class="header-link" href="#!">Сравнить</a>
         </li>
         <li class="header-item">
@@ -91,40 +90,40 @@
         </ul>
       </header>
       <!-- фильтр -->
-      <section class="catalog-products">
-        <h2 class="catalog-products-title">фильтр</h2>
-        <form class="catalog-filter" action="#!" method="get">
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Стоимость</legend>
+      <section class="filter-products">
+        <h2 class="filter-products-title">фильтр</h2>
+        <form class="filter-form" action="#!" method="get">
+          <fieldset class="filter-products-group">
+            <legend class="filter-products-title">Стоимость</legend>
           </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Цвет</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
+          <fieldset class="filter-products-group">
+            <legend class="filter-products-title">Цвет</legend>
+            <ul class="filter-products-list">
+              <li class="filter-products-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="color" value="black" checked>
                   Черный
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="filter-products-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="color" value="white" checked>
                   Белый
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="filter-products-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="color" value="blue">
                   Синий
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="filter-products-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="color" value="red">
                   Красный
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="filter-products-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="color" value="pink">
                   Розовый
@@ -132,16 +131,16 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Bluetooth</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
+          <fieldset class="filter-products-group">
+            <legend class="filter-products-title">Bluetooth</legend>
+            <ul class="filter-products-list">
+              <li class="filter-products-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="product-group" value="yes" checked>
                   Есть
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="filter-products-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="product-group" value="no">
                   Нет
@@ -161,10 +160,14 @@
           </select>
           <ul class="sort-list">
             <li class="sort-item">
-              <a class="visually-hidden" href="#!">по возрастанию</a>
+              <a class="sort-link" href="#!">
+                <span class="visually-hidden">по возрастанию</span>
+              </a>
             </li>
             <li class="sort-item">
-              <a class="visually-hidden" href="#!">по убыванию</a>
+              <a class="sort-link" href="#!">
+                <span class="visually-hidden">по убыванию</span>
+              </a>
             </li>
           </ul>
         </div>
