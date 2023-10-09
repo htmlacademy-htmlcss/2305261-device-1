@@ -10,7 +10,7 @@
     <header class="header">
       <h1 class="visually-hidden">Device</h1>
       <a href="index.html">
-        <img class="logo" src="img/#!.svg" width="#" height="#" alt="Логотип сайта Device">
+        <img class="logo-img" src="img/logo.svg" width="145" height="36" alt="Логотип сайта Device">
       </a>
       <form action="#!" method="post">
         <input type="text" placeholder="Поиск по сайту">
@@ -18,15 +18,18 @@
       </form>
       <ul class="header-list">
         <li class="header-list-item">
+          <img class="entrance-img" src="img/entrance.svg" width="14" height="12" alt="Вход">
           <a class="header-link" href="#!">Коля Петухов</a>
         </li>
         <li class="header-list-item">
           <a class="header-link" href="#!">Выйти</a>
         </li>
         <li class="header-list-item">
+          <img class="compare-img" src="img/compare.svg" width="10" height="12" alt="Сравнить">
           <a class="header-link" href="#!">Сравнить</a>
         </li>
         <li class="header-item">
+          <img class="cart-img" src="img/cart.svg" width="16" height="14" alt="Корзина">
           <a class="header-link" href="#!">Корзина</a>
         </li>
       </ul>
@@ -34,6 +37,7 @@
       <nav class="navigation">
         <details class="navigation-catalog">
           <summary class="catalog-menu-opener">Каталог товаров</summary>
+          <img class="catalog-img" src="img/plus.svg" width="16" height="16" alt="Каталог товаров">
           <ul class="navigation-catalog-list">
             <li class="navigation-catalog-item">
               <a class="navigation-link" href="catalog.html">Виртуальная реальность</a>
@@ -80,9 +84,11 @@
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="#!">Главная</a>
+            <img class="breadcrumbs-img" src="img/breadcrumbs.svg" width="4" height="7" alt="Каталог товаров">
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="#!">Каталог товаров</a>
+            <img class="breadcrumbs-img" src="img/breadcrumbs.svg" width="4" height="7" alt="Моноподы для селфи">
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Моноподы для селфи</a>
@@ -157,15 +163,22 @@
             <option value="popular">Популярное</option>
             <option value="cheap">Сначала дешёвое</option>
             <option value="expensive">Сначала дорогое</option>
+
+
           </select>
+
           <ul class="sort-list">
             <li class="sort-item">
               <a class="sort-link" href="#!">
+                <img class="select-img" src="img/up.svg" width="11" height="10"
+                  alt="Сортировать от меньшего к большему">
                 <span class="visually-hidden">по возрастанию</span>
               </a>
             </li>
             <li class="sort-item">
               <a class="sort-link" href="#!">
+                <img class="select-img" src="img/down.svg" width="11" height="10"
+                  alt="Сортировать от большего к меньшему">
                 <span class="visually-hidden">по убыванию</span>
               </a>
             </li>
@@ -175,28 +188,32 @@
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#!">
-              <img class="product-card-image" src="#!" alt="">
+              <img class="product-card-image" src="img/amateur.png" width="360" height="380"
+                alt="Любительская селфи-палка">
               <h3 class="product-card-title">Любительская селфи-палка</h3>
               <b class="product-card-price">500 ₽</b>
             </a>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#!">
-              <img class="product-card-image" src="#!" alt="">
+              <img class="product-card-image" src="img/prof.png" width="360" height="380"
+                alt="Профессиональная селфи-палка">
               <h3 class="product-card-title">Профессиональная селфи-палка</h3>
               <b class="product-card-price">1500 ₽</b>
             </a>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#!">
-              <img class="product-card-image" src="#!" alt="">
+              <img class="product-card-image" src="img/unsinkable.png" width="360" height="380"
+                alt="Непотопляемая селфи-палка">
               <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
               <b class="product-card-price">2500 ₽</b>
             </a>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#!">
-              <img class="product-card-image" src="#!" alt="">
+              <img class="product-card-image" src="img/follow.png" width="360" height="380"
+                alt="Селфи-палка «Следуй за мной»">
               <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
               <b class="product-card-price">1500 ₽</b>
             </a>
@@ -224,7 +241,7 @@
             <a class="pagination-link" href="#!">15</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#!"></a>
+            <a class="pagination-link pagination-next" href="#!">Вперёд</a>
           </li>
         </ol>
       </section>
@@ -234,7 +251,8 @@
       <div class="page-footer-container">
         <section class="footer-contacts">
           <a href="https://htmlacademy.ru">
-            <img class="footer-contacts-logo" src="#" width="#" height="#" alt="Логотип сайта Device">
+            <img class="footer-contacts-logo" src="img/logofooter.svg" width="145" height="36"
+              alt="Логотип сайта Device">
           </a>
           <address class="footer-contacts-address">
             <p class="footer-about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
@@ -257,16 +275,19 @@
           <ul class="social-list">
             <li class="social-item">
               <a class="social-link footer-social-tw" href="https://t.me/htmlacademy">
+                <img class="social-img" src="img/telegram.svg" width="40" height="40" alt="Telegram">
                 <span class="visually-hidden">Телеграмм</span>
               </a>
             </li>
             <li class="social-item">
               <a class="social-link footer-social-vk" href="https://www.youtube.com/user/htmlacademyru">
+                <img class="social-img" src="img/youtube.svg" width="40" height="40" alt="YouTube">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
             <li class="social-item">
               <a class="social-link footer-social-instagram" href="https://twitter.com/htmlacademy_ru">
+                <img class="social-img" src="img/twit.svg" width="40" height="40" alt="Twitter">
                 <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
@@ -275,7 +296,7 @@
             <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 812 812-12-12</a>
           </address>
           <a class="htmlacademy-link" href="https://htmlacademy.ru">
-            <img class="htmlacademy-img" src="#" width="#" height="#" alt="">
+            <img class="htmlacademy-img" src="img/logohtml.svg" width="115" height="33" alt="Логотип HTML Academy">
           </a>
         </section>
       </div>
