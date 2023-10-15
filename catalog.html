@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Девайс</title>
   </head>
 
@@ -76,7 +77,7 @@
     <main class="main-inner">
       <!-- хлебные крошки -->
       <header class="inner-header">
-        <h1 class="inner-header-title">Моноподы для селфи</h1>
+        <h1 class="title">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="#!">Главная</a>
@@ -85,7 +86,7 @@
             <a class="breadcrumbs-link" href="#!">Каталог товаров</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Моноподы для селфи</a>
+            <a class="breadcrumbs-link ">Моноподы для селфи</a>
           </li>
         </ul>
       </header>
@@ -94,10 +95,10 @@
         <h2 class="filter-products-title">фильтр</h2>
         <form class="filter-form" action="#!" method="get">
           <fieldset class="filter-products-group">
-            <legend class="filter-products-group-title">Стоимость</legend>
+            <legend class="filter-title">Стоимость</legend>
           </fieldset>
           <fieldset class="filter-products-group">
-            <legend class="filter-products-title">Цвет</legend>
+            <legend class="filter-title">Цвет</legend>
             <ul class="filter-products-list">
               <li class="filter-products-item">
                 <label class="control">
@@ -132,7 +133,7 @@
             </ul>
           </fieldset>
           <fieldset class="filter-products-group">
-            <legend class="filter-products-title">Bluetooth</legend>
+            <legend class="filter-title">Bluetooth</legend>
             <ul class="filter-products-list">
               <li class="filter-products-item">
                 <label class="control">
@@ -152,7 +153,7 @@
         </form>
         <!-- Сортировка -->
         <div>
-          <h2 class="select-control-title">Сортировка</h2>
+          <h2 class="filter-products-title">Сортировка</h2>
           <select class="select-control" aria-label="Сортировка">
             <option value="popular">Популярное</option>
             <option value="cheap">Сначала дешёвое</option>
@@ -178,7 +179,7 @@
               <img class="product-card-image" src="img/amateur.jpg" width="360" height="380"
                 alt="Черная селфи-палка с закрепленным телефоном">
               <h3 class="product-card-title">Любительская селфи-палка</h3>
-              <b class="product-card-price">500 ₽</b>
+              <p class="product-card-price">500 ₽</p>
             </a>
           </li>
           <li class="product-card">
@@ -186,7 +187,7 @@
               <img class="product-card-image" src="img/prof.jpg" width="360" height="380"
                 alt="Черная селфи-палка в сложенном виде с кнопкой для снимков на ручке">
               <h3 class="product-card-title">Профессиональная селфи-палка</h3>
-              <b class="product-card-price">1500 ₽</b>
+              <p class="product-card-price">1500 ₽</p>
             </a>
           </li>
           <li class="product-card">
@@ -194,7 +195,7 @@
               <img class="product-card-image" src="img/unsinkable.jpg" width="360" height="380"
                 alt="Селфи-палка с петлей для руки и встроенной прямоугольной камерой">
               <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
-              <b class="product-card-price">2500 ₽</b>
+              <p class="product-card-price">2500 ₽</p>
             </a>
           </li>
           <li class="product-card">
@@ -202,7 +203,7 @@
               <img class="product-card-image" src="img/follow.jpg" width="360" height="380"
                 alt="Селфи-палка с муляжом правой руки в черном рукаве">
               <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
-              <b class="product-card-price">1500 ₽</b>
+              <p class="product-card-price">1500 ₽</p>
             </a>
           </li>
         </ul>
@@ -210,7 +211,7 @@
         <!-- Пагинация -->
         <ol class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-prev pagination-disabled">Назад</a>
+            <a class="pagination-link pagination-prev ">Назад</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -228,7 +229,7 @@
             <a class="pagination-link" href="#!">15</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#!">Вперёд</a>
+            <a class="pagination-link pagination-next pagination-included" href="#!">Вперёд</a>
           </li>
         </ol>
       </section>
@@ -248,13 +249,13 @@
         <nav class="footer-navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="#!">доставка</a>
+              <a class="footer-navigation-link" href="#!">доставка</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#!">гарантия</a>
+              <a class="footer-navigation-link" href="#!">гарантия</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#!">контакты</a>
+              <a class="footer-navigation-link" href="#!">контакты</a>
             </li>
           </ul>
         </nav>
