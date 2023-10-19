@@ -14,8 +14,8 @@
         <img class="logo-img" src="img/logo.svg" width="145" height="36" alt="Логотип сайта Device">
       </a>
       <form action="#!" method="post">
-        <input type="text" placeholder="Поиск по сайту">
-        <button type="submit">Найти</button>
+        <input class="header-input input" type="text" placeholder="Поиск по сайту">
+        <button class="header-find" type="submit">Найти</button>
       </form>
       <ul class="header-list">
         <li class="header-list-item">
@@ -37,26 +37,26 @@
           <summary class="catalog-menu-opener">Каталог товаров</summary>
           <ul class="navigation-catalog-list">
             <li class="navigation-catalog-item">
-              <a class="navigation-link" href="catalog.html">Виртуальная реальность</a>
+              <a class="navigation-catalog-link" href="catalog.html">Виртуальная реальность</a>
             </li>
             <li class="navigation-catalog-item">
-              <a class="navigation-link" href="catalog.html">Моноподы для cелфи</a>
+              <a class="navigation-catalog-link" href="catalog.html">Моноподы для cелфи</a>
             </li>
             <li class="navigation-catalog-item">
-              <a class="navigation-link" href="catalog.html">Экшн-камеры</a>
-            </li>
-          </ul>
-          <ul class="navigation-catalog-list">
-            <li class="navigation-catalog-item">
-              <a class="navigation-link" href="catalog.html">Фитнес-браслеты</a>
-            </li>
-            <li class="navigation-catalog-item">
-              <a class="navigation-link" href="catalog.html">Умные часы</a>
+              <a class="navigation-catalog-link" href="catalog.html">Экшн-камеры</a>
             </li>
           </ul>
           <ul class="navigation-catalog-list">
             <li class="navigation-catalog-item">
-              <a class="navigation-link" href="catalog.html">Квадрокоптеры</a>
+              <a class="navigation-catalog-link" href="catalog.html">Фитнес-браслеты</a>
+            </li>
+            <li class="navigation-catalog-item">
+              <a class="navigation-catalog-link" href="catalog.html">Умные часы</a>
+            </li>
+          </ul>
+          <ul class="navigation-catalog-list">
+            <li class="navigation-catalog-item">
+              <a class="navigation-catalog-link" href="catalog.html">Квадрокоптеры</a>
             </li>
           </ul>
         </details>
@@ -102,31 +102,31 @@
             <ul class="filter-products-list">
               <li class="filter-products-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="black" checked>
+                  <input class="input" type="checkbox" name="color" value="black" checked>
                   Черный
                 </label>
               </li>
               <li class="filter-products-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="white" checked>
+                  <input class="input" type="checkbox" name="color" value="white" checked>
                   Белый
                 </label>
               </li>
               <li class="filter-products-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="blue">
+                  <input class="input" type="checkbox" name="color" value="blue">
                   Синий
                 </label>
               </li>
               <li class="filter-products-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="red">
+                  <input class="input" type="checkbox" name="color" value="red">
                   Красный
                 </label>
               </li>
               <li class="filter-products-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="color" value="pink">
+                  <input class="input" type="checkbox" name="color" value="pink">
                   Розовый
                 </label>
               </li>
@@ -137,13 +137,13 @@
             <ul class="filter-products-list">
               <li class="filter-products-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="yes" checked>
+                  <input class="input" type="radio" name="product-group" value="yes" checked>
                   Есть
                 </label>
               </li>
               <li class="filter-products-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="product-group" value="no">
+                  <input class="input" type="radio" name="product-group" value="no">
                   Нет
                 </label>
               </li>
@@ -154,7 +154,7 @@
         <!-- Сортировка -->
         <div>
           <h2 class="filter-products-title">Сортировка</h2>
-          <select class="select-control" aria-label="Сортировка">
+          <select class="select" aria-label="Сортировка">
             <option value="popular">Популярное</option>
             <option value="cheap">Сначала дешёвое</option>
             <option value="expensive">Сначала дорогое</option>
@@ -207,11 +207,11 @@
             </a>
           </li>
         </ul>
-        <button class="button pagination-show-more" type="button">Загрузить ещё</button>
+        <button class="pagination-show-more" type="button">Загрузить ещё</button>
         <!-- Пагинация -->
         <ol class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-prev ">Назад</a>
+            <a class="pagination-link pagination-ring pagination-disabled ">Назад</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -229,7 +229,7 @@
             <a class="pagination-link" href="#!">15</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-next pagination-included" href="#!">Вперёд</a>
+            <a class="pagination-link pagination-ring" href="#!">Вперёд</a>
           </li>
         </ol>
       </section>
@@ -249,30 +249,30 @@
         <nav class="footer-navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="footer-navigation-link" href="#!">доставка</a>
+              <a class="navigation-link" href="#!">доставка</a>
             </li>
             <li class="navigation-item">
-              <a class="footer-navigation-link" href="#!">гарантия</a>
+              <a class="navigation-link" href="#!">гарантия</a>
             </li>
             <li class="navigation-item">
-              <a class="footer-navigation-link" href="#!">контакты</a>
+              <a class="navigation-link" href="#!">контакты</a>
             </li>
           </ul>
         </nav>
         <section class="social">
           <ul class="social-list">
             <li class="social-item">
-              <a class="social-link footer-social-tw" href="https://t.me/htmlacademy">
+              <a class="navigation-link footer-social-tw" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграмм</span>
               </a>
             </li>
             <li class="social-item">
-              <a class="social-link footer-social-vk" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="navigation-link footer-social-vk" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
             <li class="social-item">
-              <a class="social-link footer-social-instagram" href="https://twitter.com/htmlacademy_ru">
+              <a class="navigation-link footer-social-instagram" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
