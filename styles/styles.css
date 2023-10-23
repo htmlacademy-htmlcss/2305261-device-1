@@ -22,23 +22,32 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-   font-family: "Rubik", sans-serif;
-   font-size: 18px;
-   font-weight: 400;
-   line-height: 1.6666667;
-   color: #000000;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6666667;
+  color: #000000;
 }
 
 .button {
   font-family: "Raleway", sans-serif;
-  color:inherit;
+  color: inherit;
   font-size: 18px;
   font-weight: 800;
   line-height: 21px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  background-color: transparent;
 }
 
 .title {
@@ -52,20 +61,15 @@ body {
   color: #444444;
 }
 
-.header {
-  font-family: "Raleway", sans-serif;
+.input {
+  font-family: inherit;
   font-size: 16px;
-  font-weight: 800;
   line-height: 20px;
-  text-transform: none;
-  background-color:#ffe17f;
 }
 
-.header-input {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: none;
-  text-align: left;
+.header {
+  background-color: #ffe17f;
+  color: #000000;
 }
 
 .header-find {
@@ -76,19 +80,11 @@ body {
 
 .header-link {
   color: inherit;
-  line-height: 30px;
   text-decoration: none;
 }
 
-.catalog-menu-opener {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  line-height: 21px;
-  text-transform: uppercase;
-  letter-spacing: 3.6px;
-}
-
 .navigation-catalog-link {
+  font-size: 16px;
   line-height: 18px;
   color: inherit;
   text-decoration: none;
@@ -96,6 +92,7 @@ body {
 
 .navigation-link {
   font-family: "Raleway", sans-serif;
+  font-size: 18px;
   font-weight: 800;
   line-height: 21px;
   color: inherit;
@@ -103,10 +100,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3.6px;
-}
-
-.slider-order-item {
-  background: linear-gradient(#ffe17f 17%);
 }
 
 .title {
@@ -125,11 +118,15 @@ body {
   color: #444444;
 }
 
-.main-catalog-item {
-  background: linear-gradient(#ffe17f 66%);
+.main-container {
+  flex-grow: 1;
 }
 
-.main-catalog-description {
+.main-catalog-item {
+  background-color: #ffe17f;
+}
+
+.main-catalog-link {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -137,10 +134,11 @@ body {
   color: inherit;
   text-decoration: none;
   text-align: center;
+  letter-spacing: -2%;
 }
 
 .services {
-  background: linear-gradient(#f0f0f0);
+  background-color: #f0f0f0;
 }
 
 .button-current {
@@ -165,6 +163,7 @@ body {
 .content-item {
   font-weight: 700;
   line-height: 20px;
+  letter-spacing: -2%;
 }
 
 .content-subtitle {
@@ -177,12 +176,6 @@ body {
   font-style: normal;
 }
 
-.content-text-link {
-  color: #444444;
-  text-align: center;
-  text-decoration-line: underline;
-}
-
 .page-footer {
   background-color: #444444;
   color: #ffffff;
@@ -190,14 +183,19 @@ body {
   line-height: 20px;
 }
 
-.footer-contacts-address-phone {
-  color: #ffffff;
+.social-link {
+  background-color: #444444;
   text-decoration: none;
-  font-style: normal;  /* я не знаю откуда наследуется italic */
+  color: #fff;
 }
 
-.footer-about-text {
-  font-style: normal;   /* я не знаю откуда наследуется italic */
+.footer-contacts-address {
+  font-style: normal;
+}
+
+.footer-contacts-address-phone {
+  color: inherit;
+  text-decoration: none;
 }
 
 .breadcrumbs-link {
@@ -205,11 +203,6 @@ body {
   color: inherit;
   font-size: 16px;
   line-height: 20px;
-}
-
-.filter-products {
-  background-color: #f0f0f0;
-  color:  #000000;
 }
 
 .filter-products-title {
@@ -225,19 +218,17 @@ body {
   line-height: 19px;
 }
 
-.input {
-  font-size: 16px;
-  line-height: 20px;
-}
-
 .sort-link {
   color: inherit;
   text-decoration: none;
 }
 
-.product-list {
-  background-color: #ffffff;
-  color: #000000;
+.select {
+  font-family: inherit;
+}
+
+.filter-products {
+  background-color: #f0f0f0;
 }
 
 .product-card-link {
@@ -258,7 +249,7 @@ body {
 
 .pagination-show-more {
   font-family: "Raleway", sans-serif;
-  color:inherit;
+  color: inherit;
   font-size: 16px;
   font-weight: 800;
   line-height: 19px;
@@ -274,6 +265,11 @@ body {
   color: #444444;
   text-align: center;
   text-decoration: none;
+  opacity: 0.3;
+}
+
+.pagination-current {
+  opacity: 0.6;
 }
 
 .pagination-ring {
@@ -292,4 +288,5 @@ body {
 .pagination-disabled {
   color: #444444;
   pointer-events: none;
+  opacity: 0.3;
 }
