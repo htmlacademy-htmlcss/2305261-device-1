@@ -19,7 +19,7 @@
         />
       </a>
       <form action="#!" method="post">
-        <input class="input" type="text" placeholder="Поиск по сайту" />
+        <input class="input" type="text" placeholder="Текст поиска" />
         <button class="header-find" type="submit">Найти</button>
       </form>
       <ul class="header-list">
@@ -120,7 +120,7 @@
               <li class="filter-products-item">
                 <label class="control">
                   <input
-                    class="input"
+                    class="input-color"
                     type="checkbox"
                     name="color"
                     value="black"
@@ -210,9 +210,9 @@
         <div>
           <h2 class="filter-products-title">Сортировка</h2>
           <select class="select" aria-label="Сортировка">
-            <option value="popular">Популярное</option>
-            <option value="cheap">Сначала дешёвое</option>
-            <option value="expensive">Сначала дорогое</option>
+            <option value="popular">Популярные</option>
+            <option value="cheap">Сначала дешёвые</option>
+            <option value="expensive">Сначала дорогие</option>
           </select>
           <ul class="sort-list">
             <li class="sort-item">
@@ -288,9 +288,7 @@
         <!-- Пагинация -->
         <ol class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-ring pagination-disabled"
-              >Назад</a
-            >
+            <a class="pagination-ring pagination-disabled">Назад</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -308,7 +306,7 @@
             <a class="pagination-link" href="#!">15</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-ring" href="#!">Вперёд</a>
+            <a class="pagination-ring" href="#!">Вперёд</a>
           </li>
         </ol>
       </section>
