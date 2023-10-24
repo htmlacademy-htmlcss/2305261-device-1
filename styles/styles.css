@@ -1,4 +1,301 @@
-body {
-  background: rgba(255, 255, 255, 1);
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6666667;
+  color: #000000;
+}
+
+.button {
+  font-family: "Raleway", sans-serif;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 3.6px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.text {
+  color: #444444;
+}
+/* почему-то в том месте класс input отказывался наследоваться
+ поэтому пришлось задать класс родителю*/
+.control {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.header {
+  background-color: #ffe17f;
+}
+
+.header-find {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.header-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigation-catalog-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navigation-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+
+.property-key {
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.property-value {
+  font-size: 16px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.main-catalog-item {
+  background-color: #ffe17f;
+}
+
+.main-catalog-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.services {
+  background-color: #f0f0f0;
+}
+
+.button-current {
+  color: #ffe17f;
+  background-color: #000000;
+}
+
+.delivery {
+  background-color: #f0f0f0;
+}
+
+.delivery-button {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+
+.content-item {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.content-subtitle {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #444444;
+}
+
+.content-address {
+  font-style: normal;
+}
+
+.field-e-mail {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+}
+.page-footer {
+  background-color: #444444;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.social-link {
+  background-color: #444444;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-contacts-address {
+  font-style: normal;
+}
+
+.footer-contacts-address-phone {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.filter-products-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.filter-title {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.sort-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.select {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.filter-products {
+  background-color: #f0f0f0;
+}
+
+.product-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.product-card-price {
+  line-height: 21px;
+  color: #444444;
+  text-align: right;
+}
+
+.pagination-show-more {
+  font-family: "Raleway", sans-serif;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 19px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+
+.pagination-link {
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+.pagination-current {
+  opacity: 0.6;
+}
+
+.pagination-ring {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 3.6px;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.pagination-disabled {
+  color: #444444;
+  pointer-events: none;
+  opacity: 0.3;
 }
