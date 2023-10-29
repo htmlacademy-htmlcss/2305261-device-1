@@ -30,6 +30,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
@@ -44,7 +45,7 @@ body {
   font-size: 18px;
   font-weight: 800;
   line-height: 21px;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -61,14 +62,17 @@ body {
 .text {
   color: #444444;
 }
-/* почему-то в том месте класс input отказывался наследоваться
- поэтому пришлось задать класс родителю*/
-.control {
+
+.input {
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
 }
 
 .header {
+  display: flex;
+  width: 1160px;
+  flex-direction: column;
   background-color: #ffe17f;
 }
 
@@ -77,6 +81,37 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  width: 517px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-catalog-list {
+  display: flex;
+  width: 293px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-link {
@@ -92,6 +127,7 @@ body {
 }
 
 .navigation-link {
+  align-self: flex-start;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -100,17 +136,32 @@ body {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-navigation {
+  width: 471px;
+}
+.page-conteiner {
+  width: 1160px;
+  margin: 0 auto;
+}
+.slider-order-property {
+  line-height: 30px;
 }
 
 .property-key {
   font-size: 36px;
-  line-height: 30px;
 }
 
 .property-value {
   font-size: 16px;
-  line-height: 30px;
   color: #444444;
 }
 
@@ -118,7 +169,23 @@ body {
   flex-grow: 1;
 }
 
+.main-container-wrop {
+  display: flex;
+  width: 1160px;
+  flex-direction: column;
+}
+
+.main-catalog-list {
+  display: flex;
+  width: 1160px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .main-catalog-item {
+  width: 160px;
   background-color: #ffe17f;
 }
 
@@ -134,7 +201,22 @@ body {
 }
 
 .services {
+  display: flex;
+  width: 1440px;
+  flex-wrap: wrap;
   background-color: #f0f0f0;
+}
+
+.tabs {
+  width: 280px;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs-contents {
+  width: 694px;
+  margin: 0;
+  padding: 0;
 }
 
 .button-current {
@@ -153,7 +235,22 @@ body {
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
+  width: 1160px;
+  flex-grow: 1;
+}
+
+.info-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-left {
+  width: 520px;
+}
+
+.content-right {
+  width: 532px;
 }
 
 .content-item {
@@ -173,11 +270,15 @@ body {
   font-style: normal;
 }
 
-.field-e-mail {
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 30px;
+.newsletter-form {
   color: #444444;
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1440px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 .page-footer {
   background-color: #444444;
@@ -201,6 +302,10 @@ body {
   text-decoration: none;
 }
 
+.inner-header {
+  width: 1079px;
+}
+
 .breadcrumbs-link {
   text-decoration: none;
   color: inherit;
@@ -208,12 +313,18 @@ body {
   line-height: 20px;
 }
 
+.filter-products-wrop {
+  display: flex;
+  width: 320px;
+  padding-left: 60px;
+}
+
 .filter-products-title {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 19px;
   font-weight: 800;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
@@ -223,6 +334,13 @@ body {
   letter-spacing: -0.02em;
 }
 
+.sort-wrop {
+  display: flex;
+  width: 840px;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
 .sort-link {
   color: inherit;
   text-decoration: none;
@@ -232,6 +350,19 @@ body {
   font-family: inherit;
   font-size: 18px;
   line-height: 30px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 840px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+.product-card {
+  width: 360px;
 }
 
 .filter-products {
@@ -265,7 +396,7 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
 }
 
 .pagination-link {
@@ -286,7 +417,7 @@ body {
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   color: inherit;
   text-decoration: none;
   text-align: center;
