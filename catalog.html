@@ -19,7 +19,12 @@
       </a>
       <div class="header-wrap">
         <form action="#!" method="post">
-          <input class="input" type="text" placeholder="Поиск по сайту" />
+          <input
+            class="input"
+            type="text"
+            placeholder="Поиск по сайту"
+            value="Текст поиска"
+          />
           <button class="header-find" type="submit">Найти</button>
         </form>
         <ul class="header-list">
@@ -91,7 +96,7 @@
       </nav>
     </header>
     <!-- МЕЙН -->
-    <main class="main-container container">
+    <main class="main-container">
       <!-- хлебные крошки -->
       <header class="breadcrumbs">
         <h1 class="title">Моноподы для селфи</h1>
@@ -110,7 +115,7 @@
       <!-- фильтр -->
       <section class="filter-products">
         <h2 class="filter-products-title">фильтр</h2>
-        <form class="filter-form" action="#!" method="get">
+        <form class="filter-form container" action="#!" method="get">
           <fieldset class="filter-products-group">
             <legend class="filter-title">Стоимость</legend>
           </fieldset>
@@ -284,31 +289,31 @@
           <button class="pagination-show-more" type="button">
             Загрузить ещё
           </button>
+          <!-- Пагинация -->
+          <ol class="pagination">
+            <li class="pagination-item">
+              <a class="pagination-ring pagination-disabled">Назад</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#!">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#!">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#!">...</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#!">15</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-ring" href="#!">Вперёд</a>
+            </li>
+          </ol>
         </div>
-        <!-- Пагинация -->
-        <ol class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-ring pagination-disabled">Назад</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#!">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#!">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#!">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#!">15</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-ring" href="#!">Вперёд</a>
-          </li>
-        </ol>
       </section>
     </main>
     <!-- ФУТЕР -->
@@ -329,61 +334,61 @@
           </p>
         </address>
       </section>
-        <nav class="footer-navigation">
-          <ul class="footer-navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#!">доставка</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#!">гарантия</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#!">контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <section class="social">
-          <ul class="social-list">
-            <li class="social-item">
-              <a
-                class="social-link footer-social-tw"
-                href="https://t.me/htmlacademy"
-              >
-                <span class="visually-hidden">Телеграмм</span>
-              </a>
-            </li>
-            <li class="social-item">
-              <a
-                class="social-link footer-social-vk"
-                href="https://www.youtube.com/user/htmlacademyru"
-              >
-                <span class="visually-hidden">Ютуб</span>
-              </a>
-            </li>
-            <li class="social-item">
-              <a
-                class="social-link footer-social-instagram"
-                href="https://twitter.com/htmlacademy_ru"
-              >
-                <span class="visually-hidden">Твиттер</span>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <address class="footer-contacts-address">
-          <a class="footer-contacts-address-phone" href="tel:+78128121212">
-            +7 812 812-12-12
-          </a>
-        </address>
-        <a class="htmlacademy-link" href="https://htmlacademy.ru">
-          <img
-            class="htmlacademy-img"
-            src="img/logo-htmlacademy.svg"
-            width="115"
-            height="33"
-            alt="Логотип HTML Academy"
-          />
+      <nav class="footer-navigation">
+        <ul class="footer-navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#!">доставка</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#!">гарантия</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#!">контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="social">
+        <ul class="social-list">
+          <li class="social-item">
+            <a
+              class="social-link footer-social-tw"
+              href="https://t.me/htmlacademy"
+            >
+              <span class="visually-hidden">Телеграмм</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link footer-social-vk"
+              href="https://www.youtube.com/user/htmlacademyru"
+            >
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link footer-social-instagram"
+              href="https://twitter.com/htmlacademy_ru"
+            >
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <address class="footer-contacts-address">
+        <a class="footer-contacts-address-phone" href="tel:+78128121212">
+          +7 812 812-12-12
         </a>
-  </footer>
+      </address>
+      <a class="htmlacademy-link" href="https://htmlacademy.ru">
+        <img
+          class="htmlacademy-img"
+          src="img/logo-htmlacademy.svg"
+          width="115"
+          height="33"
+          alt="Логотип HTML Academy"
+        />
+      </a>
+    </footer>
   </body>
 </html>

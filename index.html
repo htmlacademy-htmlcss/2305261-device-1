@@ -74,7 +74,7 @@
             </li>
           </ul>
         </details>
-        <ul class="navigation-list">
+        <ul class="navigation-list header-navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#!">Доставка</a>
           </li>
@@ -88,9 +88,8 @@
       </nav>
     </header>
     <!-- МЕЙН -->
-    <main class="main-container container">
+    <main class="main-container">
       <!-- слайдер -->
-
       <section class="gallery-orders">
         <div class="slider">
           <button class="slider-button slider-next" type="button">
@@ -100,7 +99,7 @@
             <span class="visually-hidden">Следующий слайд</span>
           </button>
           <!-- карточки слайера -->
-          <ul class="slider-order">
+          <ul class="slider-order container">
             <li class="slider-order-item">
               <img
                 class="slider-img"
@@ -188,7 +187,7 @@
         </div>
       </section>
       <!-- картинки товара -->
-      <section class="main-catalog">
+      <section class="main-catalog container">
         <ul class="main-catalog-list container">
           <li class="main-catalog-item">
             <a class="main-catalog-link" href="#!">Виртуальная реальность</a>
@@ -243,6 +242,7 @@
           </li>
           <li class="tabs-contents-item">
             <h2 class="title">Кредит</h2>
+
             <p class="text">
               Залезть в долговую яму стало проще! Кредитные консультанты
               подберут для вас наиболее выгодные условия кредита. Выгодные для
@@ -250,13 +250,13 @@
             </p>
           </li>
         </ul>
-        <button class="delivery-button" type="button">
+        <button class="delivery-button container" type="button">
           Доставим редкий товар под заказ
         </button>
       </section>
       <!-- О НАС и КОНТАКТЫ -->
       <div class="info-content container">
-        <section class="content-left">
+        <section>
           <h2 class="title">О нас</h2>
           <p class="text">
             Огромный выбор гаджетов не оставит равнодушным гика, который есть в
@@ -273,7 +273,7 @@
           </ul>
           <a class="content-link button" href="#!">подробнее о нас</a>
         </section>
-        <section class="content-right">
+        <section>
           <h2 class="title">Контакты</h2>
           <p class="text">
             Вы можете забрать товар сами, заехав в наш офис. За одно сможете
@@ -321,78 +321,80 @@
       </section>
     </main>
     <!-- ФУТЕР -->
-    <footer class="page-footer container">
-      <section class="footer-contacts">
-        <a href="https://htmlacademy.ru">
+    <footer class="page-footer">
+      <div class="footer-wrap">
+        <section class="footer-contacts">
+          <a href="https://htmlacademy.ru">
+            <img
+              class="footer-contacts-logo"
+              src="img/logo-color.svg"
+              width="145"
+              height="36"
+              alt="Логотип сайта Device"
+            />
+          </a>
+          <address class="footer-contacts-address">
+            <p class="footer-about-text">
+              Санкт-Петербург, набережная реки Карповки, 5, литера П.
+            </p>
+          </address>
+        </section>
+        <nav class="footer-navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="#!">доставка</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#!">гарантия</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#!">контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="social">
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                class="social-link footer-social-tw"
+                href="https://t.me/htmlacademy"
+              >
+                <span class="visually-hidden">Телеграмм</span>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                class="social-link footer-social-vk"
+                href="https://www.youtube.com/user/htmlacademyru"
+              >
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+            <li class="social-item">
+              <a
+                class="social-link footer-social-instagram"
+                href="https://twitter.com/htmlacademy_ru"
+              >
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <address class="footer-contacts-address">
+          <a class="footer-contacts-address-phone" href="tel:+78128121212">
+            +7 812 812-12-12
+          </a>
+        </address>
+        <a class="htmlacademy-link" href="https://htmlacademy.ru">
           <img
-            class="footer-contacts-logo"
-            src="img/logo-color.svg"
-            width="145"
-            height="36"
-            alt="Логотип сайта Device"
+            class="htmlacademy-img"
+            src="img/logo-htmlacademy.svg"
+            width="115"
+            height="33"
+            alt="Логотип HTML Academy"
           />
         </a>
-        <address class="footer-contacts-address">
-          <p class="footer-about-text">
-            Санкт-Петербург, набережная реки Карповки, 5, литера П.
-          </p>
-        </address>
-      </section>
-      <nav class="footer-navigation">
-        <ul class="footer-navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#!">доставка</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#!">гарантия</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#!">контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <section class="social">
-        <ul class="social-list">
-          <li class="social-item">
-            <a
-              class="social-link footer-social-tw"
-              href="https://t.me/htmlacademy"
-            >
-              <span class="visually-hidden">Телеграмм</span>
-            </a>
-          </li>
-          <li class="social-item">
-            <a
-              class="social-link footer-social-vk"
-              href="https://www.youtube.com/user/htmlacademyru"
-            >
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-          <li class="social-item">
-            <a
-              class="social-link footer-social-instagram"
-              href="https://twitter.com/htmlacademy_ru"
-            >
-              <span class="visually-hidden">Твиттер</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <address class="footer-contacts-address">
-        <a class="footer-contacts-address-phone" href="tel:+78128121212">
-          +7 812 812-12-12
-        </a>
-      </address>
-      <a class="htmlacademy-link" href="https://htmlacademy.ru">
-        <img
-          class="htmlacademy-img"
-          src="img/logo-htmlacademy.svg"
-          width="115"
-          height="33"
-          alt="Логотип HTML Academy"
-        />
-      </a>
+      </div>
     </footer>
   </body>
 </html>
