@@ -8,7 +8,7 @@
 
   <body>
     <header class="header container">
-      <a class="header-logo" href="index.html">
+      <a href="index.html">
         <img
           class="logo-img"
           src="img/logo.svg"
@@ -17,21 +17,25 @@
           alt="Логотип сайта Device"
         />
       </a>
-      <form class="header-form" action="#!" method="post">
-        <input class="input" type="text" placeholder="Поиск по сайту" />
-        <button class="header-find" type="submit">Найти</button>
-      </form>
-      <ul class="header-list">
-        <li class="header-list-item-exit">
-          <a class="header-link" href="#!">Войти</a>
-        </li>
-        <li class="header-list-item-compare">
-          <a class="header-link" href="#!">Сравнить</a>
-        </li>
-        <li class="header-list-item-card">
-          <a class="header-link" href="#!">Корзина</a>
-        </li>
-      </ul>
+      <div class="header-form-wrap">
+        <form class="header-form" action="#!" method="post">
+          <input class="input" type="text" placeholder="Поиск по сайту" />
+          <button class="header-find" type="submit">Найти</button>
+        </form>
+      </div>
+      <div class="header-list-wrap">
+        <ul class="header-list">
+          <li class="header-list-item-exit">
+            <a class="header-link" href="#!">Войти</a>
+          </li>
+          <li class="header-list-item-compare">
+            <a class="header-link" href="#!">Сравнить</a>
+          </li>
+          <li class="header-list-item-card">
+            <a class="header-link" href="#!">Корзина</a>
+          </li>
+        </ul>
+      </div>
       <nav class="navigation">
         <details class="navigation-catalog">
           <summary class="navigation-link">Каталог товаров</summary>
@@ -115,15 +119,15 @@
                   лазером, замаскированным под стандартную камеру.
                 </p>
                 <a class="slider-order-link button" href="#!">подробнее</a>
-                <dl class="slider-order-property">
-                  <div class="slider-order-property-wrap">
-                    <dt class="property-key">800 м</dt>
-                    <dd class="property-value">Дальность полета</dd>
-                  </div>
-                  <div class="slider-order-property-wrap">
-                    <dt class="property-key">50 м</dt>
-                    <dd class="property-value">Радиус поражения</dd>
-                  </div>
+                <dl class="slider-order-property slider-order-property-wrap">
+                  <dt class="property-key">800 м</dt>
+                  <dd class="property-value property-value-element-one">
+                    Дальность полета
+                  </dd>
+                  <dt class="property-key">50 м</dt>
+                  <dd class="property-value property-value-element-two">
+                    Радиус поражения
+                  </dd>
                 </dl>
               </div>
             </li>
@@ -142,13 +146,11 @@
                   пропускать занятия и соблюдать диету.
                 </p>
                 <a class="slider-order-link button" href="#!">подробнее</a>
-                <dl class="slider-order-property">
-                  <div class="slider-order-property-wrap">
-                    <dt class="property-key">48 часов</dt>
-                    <dd class="property-value property-value-element-one">
-                      Без подзарядки
-                    </dd>
-                  </div>
+                <dl class="slider-order-property slider-order-property-wrap">
+                  <dt class="property-key">48 часов</dt>
+                  <dd class="property-value property-value-element-one">
+                    Без подзарядки
+                  </dd>
                 </dl>
               </div>
             </li>
@@ -167,25 +169,19 @@
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
                 </p>
                 <a class="slider-order-link button" href="#!">подробнее</a>
-                <dl class="slider-order-property">
-                  <div class="slider-order-property-wrap">
-                    <dt class="property-key">8,5</dt>
-                    <dd class="property-value property-value-element-one">
-                      Длина палки
-                    </dd>
-                  </div>
-                  <div class="slider-order-property-wrap">
-                    <dt class="property-key">5 кг</dt>
-                    <dd class="property-value property-value-element-two">
-                      Вес палки
-                    </dd>
-                  </div>
-                  <div class="slider-order-property-wrap">
-                    <dt class="property-key">Карбон</dt>
-                    <dd class="property-value property-value-element-three">
-                      Материал
-                    </dd>
-                  </div>
+                <dl class="slider-order-property slider-order-property-wrap">
+                  <dt class="property-key">8,5</dt>
+                  <dd class="property-value property-value-element-one">
+                    Длина палки
+                  </dd>
+                  <dt class="property-key">5 кг</dt>
+                  <dd class="property-value property-value-element-two">
+                    Вес палки
+                  </dd>
+                  <dt class="property-key">Карбон</dt>
+                  <dd class="property-value property-value-element-three">
+                    Материал
+                  </dd>
                 </dl>
               </div>
             </li>
@@ -358,7 +354,7 @@
     <!-- ФУТЕР -->
     <footer class="page-footer">
       <div class="footer-wrap container">
-        <a class="footer-logo" href="https://htmlacademy.ru">
+        <a href="https://htmlacademy.ru">
           <img
             class="footer-contacts-logo"
             src="img/logo-color.svg"
