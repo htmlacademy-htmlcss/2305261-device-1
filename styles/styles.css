@@ -88,29 +88,15 @@ body {
 
 .header {
   display: grid;
-  padding: 5px 60px 16px 60px;
+  padding: 5px 60px 16px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 40px 40px 50px;
   gap: 30px 26px;
   background-color: #ffe17f;
 }
 
-.header-form-wrap {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  align-content: center;
-}
-
-.header-list-wrap {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  align-content: center;
-}
-
-.navigation-list-wrap {
-  grid-column: 2/3;
-  grid-row: 3/4;
-  align-content: center;
+.header-logo {
+  grid-column: 1/-1;
+  justify-self: start;
 }
 
 .header-find {
@@ -122,29 +108,29 @@ body {
 
 .header-form {
   display: grid;
-  grid-template-columns: 359px 160px;
+  grid-template-columns: 1fr 160px;
   box-sizing: border-box;
 }
-/* Думала думала, так и не придумала как сделать чтобы оно
-само подстраивалось под количество кнопок */
+
 .header-list {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
   margin: 0;
   padding: 0;
-  grid-template-columns: 2fr 1fr 1fr;
   gap: 26px;
   list-style-type: none;
 }
 
-.navigation {
-  grid-column: 1/2;
-  grid-row: 3/4;
+.navigation-catalog {
+  display: flex;
+  flex-wrap: wrap;
 }
-
 .navigation-catalog-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-
 .header-link {
   color: inherit;
   text-decoration: none;
@@ -167,22 +153,30 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  list-style-type: none;
 }
 
 .navigation-list {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: end;
   gap: 26px;
   list-style-type: none;
 }
 
 .slider-order-property {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 12px 20px;
+  margin: 0;
   line-height: 30px;
 }
-
+.slider-order-property-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 .slider-order-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -193,31 +187,6 @@ body {
   display: grid;
   gap: 50px;
   padding-top: 120px;
-}
-
-.slider-order-property-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px 20px;
-  margin: 0;
-}
-
-.property-value-element-one {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  margin: 0;
-}
-
-.property-value-element-two {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  margin: 0;
-}
-
-.property-value-element-three {
-  grid-column: 3/4;
-  grid-row: 2/3;
-  margin: 0;
 }
 
 .property-key {
@@ -255,27 +224,23 @@ body {
 }
 
 .services {
-  display: grid;
   background-color: #f0f0f0;
 }
 
 .services-wrap {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 70px 110px;
 }
 
 .tabs {
   width: 280px;
-  flex-shrink: 0;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 .tabs-contents {
-  flex-grow: 1;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -302,7 +267,6 @@ body {
 
 .delivery-button-wrap {
   grid-column: 1/-1;
-  grid-row: 2/3;
 }
 
 .info-content {
@@ -369,10 +333,12 @@ body {
   display: grid;
   padding: 60px 140px;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   gap: 35px 120px;
 }
-
+.footer-logo {
+  grid-column: 1/-1;
+  justify-self: start;
+}
 .page-footer {
   background-color: #444444;
   color: #ffffff;
@@ -380,30 +346,25 @@ body {
   line-height: 20px;
 }
 
-.footer-contacts {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
 .footer-about-text {
   margin: 0;
 }
 
-.footer-navigation {
+/* .footer-navigation {
   grid-column: 2/3;
   grid-row: 2/3;
-}
+} */
 
 .footer-navigation-list-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 35px;
 }
 
-.social {
+/* .social {
   grid-column: 2/3;
   grid-row: 3/4;
-}
+} */
 
 .social-list {
   list-style-type: none;
@@ -418,10 +379,9 @@ body {
 .footer-contacts-address {
   font-style: normal;
 }
-
+/* как поставить телефон на место? */
 .footer-contacts-address-wrap {
   grid-column: 3/4;
-  grid-row: 3/4;
 }
 
 .footer-contacts-address-phone {
@@ -431,7 +391,6 @@ body {
 
 .htmlacademy-link-wrap {
   grid-column: 3/4;
-  grid-row: 1/2;
 }
 
 .breadcrumbs {
@@ -481,17 +440,13 @@ body {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .filter-title {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
-}
-
-.products-wrap {
-  display: grid;
-  grid-template-rows: 1fr 2fr;
 }
 
 .sort-list-wrap {
@@ -516,13 +471,11 @@ body {
   grid-template-rows: 2fr 1fr 1fr;
   gap: 40px;
   padding: 75px 40px;
-}
-
-.product-list-background {
   background-color: #ffffff;
 }
 
 .product-list {
+  grid-column: 1/-1;
   list-style-type: none;
 }
 
@@ -530,9 +483,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  margin: 0;
 }
 
-.product-card-wrap {
+.product-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr;
@@ -576,10 +530,12 @@ body {
   text-align: right;
   margin: 0;
 }
+
 .pagination-show-more-grid {
   grid-column: 1/-1;
   grid-row: 2/3;
 }
+
 .pagination-show-more {
   font-family: "Raleway", sans-serif;
   color: inherit;
@@ -591,18 +547,22 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
+
 .pagination-wrap {
-  grid-column: 1/-1;
-  grid-row: 3/-1;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
-.pagination-item {
-  display: inline-flex;
+
+.pagination-wrap:first-child {
+  margin-right: auto;
 }
-.pagination-ring-back {
-  margin-right: 145px;
+
+.pagination-wrap:last-child {
+  margin-left: auto;
 }
+
 .pagination-link {
   font-size: 16px;
   line-height: 20px;
@@ -633,9 +593,4 @@ body {
   color: #444444;
   pointer-events: none;
   opacity: 0.3;
-}
-
-.pagination-ring-forward {
-  justify-items: end;
-  margin-left: 145px;
 }

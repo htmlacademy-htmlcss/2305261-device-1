@@ -8,7 +8,7 @@
 
   <body>
     <header class="header container">
-      <a href="index.html">
+      <a class="header-logo" href="index.html">
         <img
           class="logo-img"
           src="img/logo.svg"
@@ -17,33 +17,29 @@
           alt="Логотип сайта Device"
         />
       </a>
-      <div class="header-form-wrap">
-        <form action="#!" method="post">
-          <input
-            class="input"
-            type="text"
-            placeholder="Поиск по сайту"
-            value="Текст поиска"
-          />
-          <button class="header-find" type="submit">Найти</button>
-        </form>
-      </div>
-      <div class="header-list-wrap">
-        <ul class="header-list">
-          <li class="header-list-item">
-            <a class="header-link" href="#!">Коля Петухов</a>
-          </li>
-          <li class="header-list-item">
-            <a class="header-link" href="#!">Выйти</a>
-          </li>
-          <li class="header-list-item-compare">
-            <a class="header-link" href="#!">Сравнить</a>
-          </li>
-          <li class="header-list-item-card">
-            <a class="header-link" href="#!">Корзина</a>
-          </li>
-        </ul>
-      </div>
+      <form action="#!" method="post">
+        <input
+          class="input"
+          type="text"
+          placeholder="Поиск по сайту"
+          value="Текст поиска"
+        />
+        <button class="header-find" type="submit">Найти</button>
+      </form>
+      <ul class="header-list">
+        <li class="header-list-item">
+          <a class="header-link" href="#!">Коля Петухов</a>
+        </li>
+        <li class="header-list-item">
+          <a class="header-link" href="#!">Выйти</a>
+        </li>
+        <li class="header-list-item-compare">
+          <a class="header-link" href="#!">Сравнить</a>
+        </li>
+        <li class="header-list-item-card">
+          <a class="header-link" href="#!">Корзина</a>
+        </li>
+      </ul>
       <nav class="navigation">
         <details class="navigation-catalog">
           <summary class="navigation-link">Каталог товаров</summary>
@@ -119,7 +115,7 @@
       <!-- фильтр-->
       <section class="products">
         <div class="sort-wrap container">
-          <div class="filter-products-wrap">
+          <div>
             <h2 class="filter-products-title">фильтр</h2>
             <form class="filter-form" action="#!" method="get">
               <fieldset class="filter-products-group">
@@ -219,7 +215,7 @@
             </form>
           </div>
           <!-- Сортировка -->
-          <div class="products-wrap">
+          <div>
             <div class="sort-list-wrap">
               <h2 class="filter-products-title">Сортировка</h2>
               <select class="select" aria-label="Сортировка">
@@ -240,27 +236,24 @@
                 </li>
               </ul>
             </div>
-            <!-- Карточки/ не понимаю, почему ширина второго столбца ноль!-->
-            <div class="product-list-wrap product-list-background">
+            <div class="product-list-wrap">
               <ul class="product-list product-list-grid">
                 <li class="product-card">
-                  <div class="product-card-wrap">
-                    <a class="product-card-link" href="#!">
-                      <img
-                        class="product-card-image"
-                        src="img/amateur.jpg"
-                        width="360"
-                        height="380"
-                        alt="Черная селфи-палка с закрепленным телефоном"
-                      />
-                      <h3 class="product-card-title product-card-title-wrap">
-                        Любительская селфи-палка
-                      </h3>
-                      <p class="product-card-price product-card-price-wrap">
-                        500 ₽
-                      </p>
-                    </a>
-                  </div>
+                  <a class="product-card-link" href="#!">
+                    <img
+                      class="product-card-image"
+                      src="img/amateur.jpg"
+                      width="360"
+                      height="380"
+                      alt="Черная селфи-палка с закрепленным телефоном"
+                    />
+                    <h3 class="product-card-title product-card-title-wrap">
+                      Любительская селфи-палка
+                    </h3>
+                    <p class="product-card-price product-card-price-wrap">
+                      500 ₽
+                    </p>
+                  </a>
                 </li>
                 <li class="product-card">
                   <a class="product-card-link" href="#!">
@@ -314,13 +307,9 @@
               >
                 Загрузить ещё
               </button>
-              <!-- Пагинация / не очень мне нравится стилизация, подскажи как сделать надо было-->
               <ol class="pagination-wrap">
                 <li class="pagination-item">
-                  <a
-                    class="pagination-ring pagination-disabled pagination-ring-back"
-                    >Назад</a
-                  >
+                  <a class="pagination-ring pagination-disabled"> Назад </a>
                 </li>
                 <li class="pagination-item">
                   <a class="pagination-link pagination-current">1</a>
@@ -337,7 +326,7 @@
                 <li class="pagination-item">
                   <a class="pagination-link" href="#!">15</a>
                 </li>
-                <li class="pagination-item pagination-ring-forward">
+                <li class="pagination-item">
                   <a class="pagination-ring" href="#!">Вперёд</a>
                 </li>
               </ol>
