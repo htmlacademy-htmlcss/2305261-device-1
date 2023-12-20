@@ -10,7 +10,6 @@
     <header class="header container">
       <a class="header-logo" href="index.html">
         <img
-          class="logo-img"
           src="img/logo.svg"
           width="145"
           height="36"
@@ -20,11 +19,12 @@
       <form class="header-form" action="#!" method="post">
         <input
           class="input-decoration"
+          type="text"
           placeholder="Поиск по сайту"
           value="Текст поиска"
         />
         <svg
-          class="navigation-icon navigation-find-icon"
+          class="navigation-icon"
           width="16"
           height="16"
           viewBox="0 0 16 16"
@@ -36,22 +36,21 @@
             fill="#000"
           />
         </svg>
-        <button class="header-find header-find-decoration" type="submit">
-          Найти
-        </button>
+        <button class="header-find" type="submit">Найти</button>
       </form>
       <ul class="header-list">
-        <li class="header-list-item header-list-item-exit">
-          <a class="header-link" href="#!">Коля Петухов</a>
+        <li class="header-list-item">
+          <a class="header-link header-link-exit" href="#!">Коля Петухов</a>
         </li>
-        <li class="header-list-item header-list-item-disable">
-          <a class="header-link" href="#!">Войти </a>
+        <li class="header-list-item">
+          <a class="header-link header-link-secondary" href="#!">Выйти </a>
         </li>
-        <li class="header-list-item header-list-item-compare">
-          <a class="header-link" href="#!">Сравнить</a>
+        <li class="header-list-item">
+          <a class="header-link header-link-compare" href="#!">Сравнить</a>
         </li>
-        <li class="header-list-item header-list-item-cart">
-          <a class="header-link" href="#!">Корзина</a>
+        <li class="header-list-item">
+          <a class="header-link header-link-cart" href="#!">Корзина</a>
+          <span class="header-link-text">2</span>
         </li>
       </ul>
       <nav class="navigation">
@@ -100,18 +99,23 @@
         </details>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-header" href="#!">Доставка</a>
+            <a class="navigation-link navigation-link-header" href="#!">
+              Доставка
+            </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-header" href="#!">Гарантия</a>
+            <a class="navigation-link navigation-link-header" href="#!">
+              Гарантия
+            </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-header" href="#!">Контакты</a>
+            <a class="navigation-link navigation-link-header" href="#!">
+              Контакты
+            </a>
           </li>
         </ul>
       </nav>
     </header>
-
     <!-- МЕЙН -->
     <main class="main-container">
       <!-- хлебные крошки -->
@@ -119,7 +123,7 @@
         <h1 class="title breadcrumbs-title">Моноподы для селфи</h1>
         <ul class="breadcrumbs-list">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link breadcrumbs-link-icon" href="#!">Главная</a>
+            <a class="breadcrumbs-link" href="#!">Главная</a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="#!">Каталог товаров</a>
@@ -264,12 +268,8 @@
                       height="380"
                       alt="Черная селфи-палка с закрепленным телефоном"
                     />
-                    <h3 class="product-card-title">
-                      Любительская селфи-палка
-                    </h3>
-                    <p class="product-card-price">
-                      500 ₽
-                    </p>
+                    <h3 class="product-card-title">Любительская селфи-палка</h3>
+                    <p class="product-card-price">500 ₽</p>
                   </a>
                 </li>
                 <li class="product-card">
@@ -357,7 +357,6 @@
       <div class="footer-wrap container">
         <a class="footer-logo" href="https://htmlacademy.ru">
           <img
-            class="footer-contacts-logo"
             src="img/logo-color.svg"
             width="145"
             height="36"
@@ -365,8 +364,8 @@
           />
         </a>
         <section class="footer-contacts">
-          <address class="footer-contacts-address footer-contacts-address-line">
-            <p class="footer-about-text ">
+          <address class="footer-contacts-address">
+            <p class="footer-about-text">
               Санкт-Петербург, набережная реки Карповки, 5, литера П.
             </p>
           </address>
@@ -374,19 +373,19 @@
         <nav class="footer-navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-footer" href="#!"
-                >доставка</a
-              >
+              <a class="navigation-link navigation-link-footer" href="#!">
+                доставка
+              </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-footer" href="#!"
-                >гарантия</a
-              >
+              <a class="navigation-link navigation-link-footer" href="#!">
+                гарантия
+              </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link navigation-link-footer" href="#!"
-                >контакты</a
-              >
+              <a class="navigation-link navigation-link-footer" href="#!">
+                контакты
+              </a>
             </li>
           </ul>
         </nav>
@@ -394,7 +393,7 @@
           <ul class="social-list">
             <li class="social-item">
               <a
-                class="social-link footer-social-tg"
+                class="social-link social-link-tg"
                 href="https://t.me/htmlacademy"
               >
                 <span class="visually-hidden">Телеграмм</span>
@@ -402,7 +401,7 @@
             </li>
             <li class="social-item">
               <a
-                class="social-link footer-social-ut"
+                class="social-link social-link-ut"
                 href="https://www.youtube.com/user/htmlacademyru"
               >
                 <span class="visually-hidden">Ютуб</span>
@@ -410,7 +409,7 @@
             </li>
             <li class="social-item">
               <a
-                class="social-link footer-social-tw"
+                class="social-link social-link-tw"
                 href="https://twitter.com/htmlacademy_ru"
               >
                 <span class="visually-hidden">Твиттер</span>
@@ -418,7 +417,7 @@
             </li>
           </ul>
         </section>
-        <address class="footer-contacts-address footer-contacts-address-wrap">
+        <address class="footer-contacts-address-wrap">
           <a class="footer-contacts-address-phone" href="tel:+78128121212">
             +7 812 812-12-12
           </a>
