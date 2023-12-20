@@ -10,90 +10,111 @@
     <header class="header container">
       <a class="header-logo" href="index.html">
         <img
-          class="logo-img"
           src="img/logo.svg"
           width="145"
           height="36"
           alt="Логотип сайта Device"
         />
       </a>
-      <form action="#!" method="post">
+      <form class="header-form" action="#!" method="post">
         <input
-          class="input"
+          class="input-decoration"
           type="text"
           placeholder="Поиск по сайту"
           value="Текст поиска"
         />
+        <svg
+          class="navigation-icon"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m15.7 14.3-3.1-3.1C13.5 10 14 8.6 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.6 0 3-.5 4.2-1.4l3.1 3.1c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.2-.1-.5-.3-.7ZM2 7c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5-5-2.2-5-5Z"
+            fill="#000"
+          />
+        </svg>
         <button class="header-find" type="submit">Найти</button>
       </form>
       <ul class="header-list">
         <li class="header-list-item">
-          <a class="header-link" href="#!">Коля Петухов</a>
+          <a class="header-link header-link-exit" href="#!">Коля Петухов</a>
         </li>
         <li class="header-list-item">
-          <a class="header-link" href="#!">Выйти</a>
+          <a class="header-link header-link-secondary" href="#!">Выйти </a>
         </li>
-        <li class="header-list-item-compare">
-          <a class="header-link" href="#!">Сравнить</a>
+        <li class="header-list-item">
+          <a class="header-link header-link-compare" href="#!">Сравнить</a>
         </li>
-        <li class="header-list-item-card">
-          <a class="header-link" href="#!">Корзина</a>
+        <li class="header-list-item">
+          <a class="header-link header-link-cart" href="#!">Корзина</a>
+          <span class="header-link-text">2</span>
         </li>
       </ul>
       <nav class="navigation">
         <details class="navigation-catalog">
-          <summary class="navigation-link">Каталог товаров</summary>
-          <ul class="navigation-catalog-list">
-            <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link" href="catalog.html">
-                Виртуальная реальность
-              </a>
-            </li>
-            <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link" href="catalog.html">
-                Моноподы для cелфи
-              </a>
-            </li>
-            <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link" href="catalog.html">
-                Экшн-камеры
-              </a>
-            </li>
-          </ul>
-          <ul class="navigation-catalog-list">
-            <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link" href="catalog.html">
-                Фитнес-браслеты
-              </a>
-            </li>
-            <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link" href="catalog.html">
-                Умные часы
-              </a>
-            </li>
-          </ul>
-          <ul class="navigation-catalog-list">
-            <li class="navigation-catalog-item">
-              <a class="navigation-catalog-link" href="catalog.html">
-                Квадрокоптеры
-              </a>
-            </li>
-          </ul>
+          <summary class="navigation-link navigation-link-icon">
+            Каталог товаров
+          </summary>
+          <div class="navigation-catalog-wrap">
+            <ul class="navigation-catalog-list">
+              <li class="navigation-catalog-item">
+                <a class="navigation-catalog-link" href="catalog.html">
+                  Виртуальная реальность
+                </a>
+              </li>
+              <li class="navigation-catalog-item">
+                <a class="navigation-catalog-link" href="catalog.html">
+                  Моноподы для cелфи
+                </a>
+              </li>
+              <li class="navigation-catalog-item">
+                <a class="navigation-catalog-link" href="catalog.html">
+                  Экшн-камеры
+                </a>
+              </li>
+            </ul>
+            <ul class="navigation-catalog-list">
+              <li class="navigation-catalog-item">
+                <a class="navigation-catalog-link" href="catalog.html">
+                  Фитнес-браслеты
+                </a>
+              </li>
+              <li class="navigation-catalog-item">
+                <a class="navigation-catalog-link" href="catalog.html">
+                  Умные часы
+                </a>
+              </li>
+            </ul>
+            <ul class="navigation-catalog-list">
+              <li class="navigation-catalog-item">
+                <a class="navigation-catalog-link" href="catalog.html">
+                  Квадрокоптеры
+                </a>
+              </li>
+            </ul>
+          </div>
         </details>
-      </nav>
-      <div class="navigation-list-wrap">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#!">Доставка</a>
+            <a class="navigation-link navigation-link-header" href="#!">
+              Доставка
+            </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#!">Гарантия</a>
+            <a class="navigation-link navigation-link-header" href="#!">
+              Гарантия
+            </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#!">Контакты</a>
+            <a class="navigation-link navigation-link-header" href="#!">
+              Контакты
+            </a>
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
     <!-- МЕЙН -->
     <main class="main-container">
@@ -237,7 +258,7 @@
               </ul>
             </div>
             <div class="product-list-wrap">
-              <ul class="product-list product-list-grid">
+              <ul class="product-list">
                 <li class="product-card">
                   <a class="product-card-link" href="#!">
                     <img
@@ -247,12 +268,8 @@
                       height="380"
                       alt="Черная селфи-палка с закрепленным телефоном"
                     />
-                    <h3 class="product-card-title product-card-title-wrap">
-                      Любительская селфи-палка
-                    </h3>
-                    <p class="product-card-price product-card-price-wrap">
-                      500 ₽
-                    </p>
+                    <h3 class="product-card-title">Любительская селфи-палка</h3>
+                    <p class="product-card-price">500 ₽</p>
                   </a>
                 </li>
                 <li class="product-card">
@@ -338,9 +355,8 @@
     <!-- ФУТЕР -->
     <footer class="page-footer">
       <div class="footer-wrap container">
-        <a href="https://htmlacademy.ru">
+        <a class="footer-logo" href="https://htmlacademy.ru">
           <img
-            class="footer-contacts-logo"
             src="img/logo-color.svg"
             width="145"
             height="36"
@@ -355,15 +371,21 @@
           </address>
         </section>
         <nav class="footer-navigation">
-          <ul class="navigation-list footer-navigation-list-wrap">
+          <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="#!">доставка</a>
+              <a class="navigation-link navigation-link-footer" href="#!">
+                доставка
+              </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#!">гарантия</a>
+              <a class="navigation-link navigation-link-footer" href="#!">
+                гарантия
+              </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="#!">контакты</a>
+              <a class="navigation-link navigation-link-footer" href="#!">
+                контакты
+              </a>
             </li>
           </ul>
         </nav>
@@ -371,7 +393,7 @@
           <ul class="social-list">
             <li class="social-item">
               <a
-                class="social-link footer-social-tw"
+                class="social-link social-link-tg"
                 href="https://t.me/htmlacademy"
               >
                 <span class="visually-hidden">Телеграмм</span>
@@ -379,7 +401,7 @@
             </li>
             <li class="social-item">
               <a
-                class="social-link footer-social-vk"
+                class="social-link social-link-ut"
                 href="https://www.youtube.com/user/htmlacademyru"
               >
                 <span class="visually-hidden">Ютуб</span>
@@ -387,7 +409,7 @@
             </li>
             <li class="social-item">
               <a
-                class="social-link footer-social-instagram"
+                class="social-link social-link-tw"
                 href="https://twitter.com/htmlacademy_ru"
               >
                 <span class="visually-hidden">Твиттер</span>
@@ -395,7 +417,7 @@
             </li>
           </ul>
         </section>
-        <address class="footer-contacts-address footer-contacts-address-wrap">
+        <address class="footer-contacts-address-wrap">
           <a class="footer-contacts-address-phone" href="tel:+78128121212">
             +7 812 812-12-12
           </a>

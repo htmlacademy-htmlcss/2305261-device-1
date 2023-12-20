@@ -67,6 +67,30 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   background-color: transparent;
+  padding: 10px 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.button::before {
+  content: "";
+  display: block;
+  background-color: #ffe17f;
+  width: 100%;
+  height: 8px;
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button:hover {
+  background-color: #ffe17f;
+}
+
+.button:active {
+  background-color: #ffc700;
 }
 
 .title {
@@ -92,6 +116,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 30px 26px;
   background-color: #ffe17f;
+  position: relative;
 }
 
 .header-logo {
@@ -99,17 +124,67 @@ body {
   justify-self: start;
 }
 
-.header-find {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
+.header-logo:hover {
+  opacity: 0.6;
+}
+
+.header-logo:active {
+  opacity: 0.3;
+}
+
+.header-logo:focus-visible {
+  outline-offset: -5px;
+  outline: 2px solid #af4fff;
 }
 
 .header-form {
   display: grid;
   grid-template-columns: 1fr 160px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.input-decoration {
+  border-radius: 50px 0 0 50px;
+  border: 2px solid #000000;
+  background: transparent;
+  padding-left: 48px;
+}
+
+.navigation-icon {
+  position: absolute;
+  right: auto;
+  left: 16px;
+  margin: auto;
+}
+
+.header-find {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 0 50px 50px 0;
+  border: 2px solid #000000;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.header-find:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.header-find:disabled {
+  opacity: 0.3;
+}
+
+.header-find:active {
+  background-color: #000000;
+  color: #444444;
+}
+
+.header-find:focus-visible {
+  outline-offset: -5px;
+  outline: 2px solid #af4fff;
 }
 
 .header-list {
@@ -122,25 +197,70 @@ body {
   list-style-type: none;
 }
 
-.navigation-catalog {
-  display: flex;
-  flex-wrap: wrap;
-}
-.navigation-catalog-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 .header-link {
   color: inherit;
   text-decoration: none;
+  padding-left: 44px;
+  background-repeat: no-repeat;
+  background-size: 16px 14px;
+  background-position: center left 20px;
+  position: relative;
 }
 
-.navigation-catalog-link {
-  font-size: 16px;
-  line-height: 18px;
-  color: inherit;
-  text-decoration: none;
+.header-link-text {
+  position: absolute;
+  font-size: 14px;
+  color: #000000;
+}
+/* что то все разнесло, не поняла как надо было сделать */
+.header-link::before {
+  content: "";
+  background-color: #ffffff;
+  line-height: 21px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  left: 5px;
+}
+
+.header-link:hover {
+  opacity: 0.6;
+}
+
+.header-link:active {
+  opacity: 0.3;
+}
+
+.header-link-secondary:disabled {
+  opacity: 0.3;
+}
+
+.header-link:focus-visible {
+  outline-offset: -5px;
+  outline: 2px solid #af4fff;
+}
+
+.header-link-exit {
+  background-image: url("../img/entrance.svg");
+}
+
+.header-link-compare-compare {
+  background-image: url("../img/compare.svg");
+}
+
+.header-link-cart {
+  background-image: url("../img/cart.svg");
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / -1;
+  gap: 40px;
+  justify-content: space-between;
 }
 
 .navigation-link {
@@ -150,9 +270,83 @@ body {
   line-height: 21px;
   color: inherit;
   text-decoration: none;
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  display: block;
+}
+
+.navigation-link::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  opacity: 0;
+}
+
+.navigation-link-current::before,
+.navigation-link-footer:hover::before,
+.navigation-link-footer:active:before {
+  opacity: 1;
+}
+
+.navigation-link:active {
+  opacity: 0.3;
+}
+
+.navigation-link:focus-visible {
+  outline-offset: -5px;
+  outline: 2px solid #af4fff;
+}
+
+.navigation-link-header:hover {
+  opacity: 0.6;
+}
+
+.navigation-link-footer:hover {
+  color: #ffc700;
+}
+
+.navigation-link-footer:active {
+  color: #ffc700;
+}
+
+.navigation-link-icon {
+  padding-right: 70px;
+}
+
+.navigation-link-icon::after {
+  content: "";
+  background-image: url("../img/plus.svg");
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /* transform: в обратную сторону это куда? */
+}
+
+.navigation-catalog-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.navigation-catalog-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-catalog-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .navigation-list {
@@ -165,6 +359,42 @@ body {
   list-style-type: none;
 }
 
+.slider {
+  margin-bottom: 70px;
+}
+
+.slider-button {
+  position: absolute;
+}
+
+.slider-button:hover {
+  opacity: 0.6;
+}
+
+.slider-button:active {
+  opacity: 0.3;
+}
+
+.slider-nav {
+  background-color: #ffffff;
+  top: 250px;
+  position: relative;
+  border: none;
+}
+
+.slider-next {
+  left: 30px;
+}
+
+.slider-prev {
+  left: 500px;
+}
+
+.slider-order {
+  margin: 0;
+  padding: 0;
+}
+
 .slider-order-property {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -172,11 +402,13 @@ body {
   margin: 0;
   line-height: 30px;
 }
+
 .slider-order-property-wrap {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 12px;
 }
+
 .slider-order-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -199,17 +431,19 @@ body {
   margin: 0;
 }
 
+.slider-order-link {
+  margin-left: 50px;
+}
+
 .main-catalog-list {
   display: grid;
-  grid-template-columns: repeat(6, 160px);
+  grid-template-columns: repeat(6, 1fr);
   gap: 40px;
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.main-catalog-item {
-  background-color: #ffe17f;
+  position: relative;
+  margin-bottom: 70px;
 }
 
 .main-catalog-link {
@@ -223,14 +457,25 @@ body {
   letter-spacing: -0.02em;
 }
 
-.services {
-  background-color: #f0f0f0;
+.main-catalog-item-background {
+  background-color: #ffe17f;
+  width: 100%;
 }
 
-.services-wrap {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 70px 110px;
+.main-catalog-list svg:hover {
+  background: #ffc700;
+}
+.main-catalog-list li:active {
+  opacity: 0.3;
+}
+/* нет фокуса */
+.main-catalog-list li:focus-visible {
+  outline-offset: -5px;
+  outline: 2px solid #af4fff;
+}
+
+.services {
+  background-color: #ffffff;
 }
 
 .tabs {
@@ -244,6 +489,25 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  margin-bottom: 70px;
+  border-right: #000000 solid 8px;
+}
+
+.tabs-contents-item {
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+.tabs-icon-delivery {
+  background-image: url("../img/delivery.svg");
+}
+
+.tabs-icon-warranty {
+  background-image: url("../img/warranty.svg");
+}
+
+.tabs-icon-credit {
+  background-image: url("../img/credit.svg");
 }
 
 .button-current {
@@ -251,10 +515,7 @@ body {
   background-color: #000000;
 }
 
-.delivery {
-  background-color: #f0f0f0;
-}
-
+/* вроде добавила класс контейнер, но по центру все равно не встает */
 .delivery-button {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
@@ -263,16 +524,46 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  background-color: #f0f0f0;
+  position: relative;
 }
 
-.delivery-button-wrap {
-  grid-column: 1/-1;
+.delivery-button::before {
+  content: "";
+  background-image: url("../img/truck.svg");
+  background-repeat: no-repeat;
+  width: 125px;
+  height: 100px;
+  position: absolute;
+}
+
+.delivery-button::after {
+  content: "";
+  background-image: url("../img/info.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 125px;
+  height: 100px;
 }
 
 .info-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 108px;
+}
+
+.info-content-line {
+  position: relative;
+}
+
+.info-content-line::before {
+  content: "";
+  background-color: #000000;
+  width: 85px;
+  height: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .content-item {
@@ -311,22 +602,28 @@ body {
 
 .newsletter-text-content {
   grid-column: 2/-1;
-  grid-row: 1/2;
-}
-
-.newsletter-form-wrap {
-  grid-column: 1/-1;
-  grid-row: 2/3;
-}
-
-.newsletter-text-wrap {
-  grid-column: 3/-1;
-  grid-row: 2/3;
-  margin: 0;
 }
 
 .newsletter-form {
   color: #444444;
+}
+
+.newsletter-form-wrap {
+  grid-column: span 2;
+  grid-row: 2/3;
+}
+
+.newsletter-text-icon {
+  position: relative;
+}
+
+.newsletter-text-icon::before {
+  content: "";
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 16px;
+  height: 16px;
 }
 
 .footer-wrap {
@@ -339,6 +636,20 @@ body {
   grid-column: 1/-1;
   justify-self: start;
 }
+
+.footer-logo:hover {
+  opacity: 0.6;
+}
+
+.footer-logo:active {
+  opacity: 0.3;
+}
+
+.footer-logo:focus-visible {
+  outline-offset: -5px;
+  outline: 2px solid #af4fff;
+}
+
 .page-footer {
   background-color: #444444;
   color: #ffffff;
@@ -350,45 +661,77 @@ body {
   margin: 0;
 }
 
-/* .footer-navigation {
-  grid-column: 2/3;
-  grid-row: 2/3;
-} */
-
-.footer-navigation-list-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 35px;
-}
-
-/* .social {
-  grid-column: 2/3;
-  grid-row: 3/4;
-} */
-
 .social-list {
   list-style-type: none;
 }
 
 .social-link {
-  background-color: #444444;
+  display: inline-block;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #dcdcdc;
   text-decoration: none;
-  color: #fff;
+  margin-right: 10px;
+}
+
+.social-link-tg {
+  background-image: url("../img/telegram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-link-ut {
+  background-image: url("../img/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-link-tw {
+  background-image: url("../img/twit.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer-contacts-address {
   font-style: normal;
+  position: relative;
 }
-/* как поставить телефон на место? */
+
+.footer-contacts-address::before {
+  content: "";
+  display: block;
+  background-color: #ffc700;
+  width: 80px;
+  height: 8px;
+  position: absolute;
+  top: 100%;
+}
 .footer-contacts-address-wrap {
   grid-column: 3/4;
 }
 
 .footer-contacts-address-phone {
   color: inherit;
-  text-decoration: none;
 }
 
+.footer-contacts-address-phone:hover {
+  color: #ffc700;
+}
+
+.footer-contacts-address-phone:active {
+  color: #ffc700;
+  opacity: 0.3;
+}
+
+.footer-contacts {
+  position: relative;
+}
+
+/* еще надо поменять цвет у логотипа Академии,
+но opacity не работает. как изменить цвет самой картинки?
+на каждое состояние добавить свою картинку? */
 .htmlacademy-link-wrap {
   grid-column: 3/4;
 }
@@ -416,6 +759,14 @@ body {
   color: inherit;
   font-size: 16px;
   line-height: 20px;
+}
+
+.breadcrumbs-item::after:not(:last-child) {
+  content: "";
+  background-image: url("../img/breadcrumbs.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
 }
 
 .products {
@@ -451,8 +802,8 @@ body {
 
 .sort-list-wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 200px;
+  grid-template-columns: repeat(3, auto);
+  gap: 150px;
 }
 
 .sort-link {
@@ -468,42 +819,23 @@ body {
 
 .product-list-wrap {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
   gap: 40px;
   padding: 75px 40px;
   background-color: #ffffff;
 }
 
 .product-list {
-  grid-column: 1/-1;
-  list-style-type: none;
-}
-
-.product-list-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   margin: 0;
+  list-style-type: none;
 }
 
 .product-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
   gap: 30px 0;
-}
-
-.product-card-title-wrap {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-.product-card-price-wrap {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-.product-card {
   width: 360px;
 }
 
@@ -531,11 +863,6 @@ body {
   margin: 0;
 }
 
-.pagination-show-more-grid {
-  grid-column: 1/-1;
-  grid-row: 2/3;
-}
-
 .pagination-show-more {
   font-family: "Raleway", sans-serif;
   color: inherit;
@@ -555,11 +882,11 @@ body {
   padding: 0;
 }
 
-.pagination-wrap:first-child {
+.pagination-item:first-child {
   margin-right: auto;
 }
 
-.pagination-wrap:last-child {
+.pagination-item:last-child {
   margin-left: auto;
 }
 
