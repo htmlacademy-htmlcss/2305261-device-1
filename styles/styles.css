@@ -119,20 +119,20 @@ body {
   position: relative;
 }
 
-.header-logo {
+.logo {
   grid-column: 1/-1;
   justify-self: start;
 }
 
-.header-logo:hover {
+.logo:hover {
   opacity: 0.6;
 }
 
-.header-logo:active {
+.logo:active {
   opacity: 0.3;
 }
 
-.header-logo:focus-visible {
+.logo:focus-visible {
   outline-offset: -5px;
   outline: 2px solid #af4fff;
 }
@@ -179,7 +179,7 @@ body {
 
 .header-find:active {
   background-color: #000000;
-  color: #444444;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .header-find:focus-visible {
@@ -211,19 +211,14 @@ body {
   position: absolute;
   font-size: 14px;
   color: #000000;
-}
-/* что то все разнесло, не поняла как надо было сделать */
-.header-link::before {
-  content: "";
   background-color: #ffffff;
-  line-height: 21px;
-  border-radius: 10px;
-  text-align: center;
-  position: absolute;
-  right: 5px;
+  min-width: 5px;
+  padding: 0 8px;
+  border-radius: 20px;
   top: 0;
-  bottom: 0;
-  left: 5px;
+  right: 0;
+  line-height: 21px;
+  transform: translate(-115px, 85px);
 }
 
 .header-link:hover {
@@ -234,7 +229,7 @@ body {
   opacity: 0.3;
 }
 
-.header-link-secondary:disabled {
+.header-link-secondary {
   opacity: 0.3;
 }
 
@@ -243,11 +238,11 @@ body {
   outline: 2px solid #af4fff;
 }
 
-.header-link-exit {
+.header-link-profile {
   background-image: url("../img/entrance.svg");
 }
 
-.header-link-compare-compare {
+.header-link-compare {
   background-image: url("../img/compare.svg");
 }
 
@@ -328,7 +323,7 @@ body {
   position: absolute;
   top: 50%;
   right: 0;
-  /* transform: в обратную сторону это куда? */
+  transform: translateY(-50%);
 }
 
 .navigation-catalog-wrap {
@@ -365,7 +360,12 @@ body {
 
 .slider-button {
   position: absolute;
+   background-color: #ffffff;
+  top: 250px;
+  position: relative;
+  border: none;
 }
+
 
 .slider-button:hover {
   opacity: 0.6;
@@ -375,18 +375,11 @@ body {
   opacity: 0.3;
 }
 
-.slider-nav {
-  background-color: #ffffff;
-  top: 250px;
-  position: relative;
-  border: none;
-}
-
-.slider-next {
+.slider-prev {
   left: 30px;
 }
 
-.slider-prev {
+.slider-next {
   left: 500px;
 }
 
@@ -462,20 +455,22 @@ body {
   width: 100%;
 }
 
-.main-catalog-list svg:hover {
+.main-catalog-link svg:hover {
   background: #ffc700;
 }
-.main-catalog-list li:active {
+.main-catalog-link:active {
   opacity: 0.3;
 }
-/* нет фокуса */
-.main-catalog-list li:focus-visible {
+
+.main-catalog-link:focus-visible {
   outline-offset: -5px;
   outline: 2px solid #af4fff;
 }
-
-.services {
-  background-color: #ffffff;
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  background: #dcdcdc;
 }
 
 .tabs {
@@ -490,12 +485,12 @@ body {
   padding: 0;
   list-style-type: none;
   margin-bottom: 70px;
-  border-right: #000000 solid 8px;
+  border-left: #000000 solid 8px;
 }
 
 .tabs-contents-item {
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: 100% 0;
 }
 
 .tabs-icon-delivery {
@@ -515,7 +510,6 @@ body {
   background-color: #000000;
 }
 
-/* вроде добавила класс контейнер, но по центру все равно не встает */
 .delivery-button {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
@@ -526,15 +520,32 @@ body {
   letter-spacing: 0.2em;
   background-color: #f0f0f0;
   position: relative;
+  display: block;
 }
 
 .delivery-button::before {
   content: "";
+  background-color: #ffe17f;
   background-image: url("../img/truck.svg");
   background-repeat: no-repeat;
   width: 125px;
   height: 100px;
   position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.delivery-button:hover::before {
+  background-color: #ffc700;
+}
+
+.delivery-button:active::before {
+  opacity: 0.3;
+}
+
+.delivery-button:focus-visible::before  {
+  outline-offset: -5px;
+  outline: 2px solid #af4fff;
 }
 
 .delivery-button::after {
@@ -544,6 +555,8 @@ body {
   position: absolute;
   width: 125px;
   height: 100px;
+  top: 0;
+  right: 0;
 }
 
 .info-content {
@@ -615,6 +628,7 @@ body {
 
 .newsletter-text-icon {
   position: relative;
+  padding-left: 30px;
 }
 
 .newsletter-text-icon::before {
@@ -624,6 +638,8 @@ body {
   position: absolute;
   width: 16px;
   height: 16px;
+  top: 8px;
+  left: 0;
 }
 
 .footer-wrap {
@@ -635,19 +651,6 @@ body {
 .footer-logo {
   grid-column: 1/-1;
   justify-self: start;
-}
-
-.footer-logo:hover {
-  opacity: 0.6;
-}
-
-.footer-logo:active {
-  opacity: 0.3;
-}
-
-.footer-logo:focus-visible {
-  outline-offset: -5px;
-  outline: 2px solid #af4fff;
 }
 
 .page-footer {
@@ -674,24 +677,21 @@ body {
   background-color: #dcdcdc;
   text-decoration: none;
   margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .social-link-tg {
   background-image: url("../img/telegram.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+
 }
 
 .social-link-ut {
   background-image: url("../img/youtube.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .social-link-tw {
   background-image: url("../img/twit.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .footer-contacts-address {
@@ -761,7 +761,7 @@ body {
   line-height: 20px;
 }
 
-.breadcrumbs-item::after:not(:last-child) {
+.breadcrumbs-item:not(:last-child)::after {
   content: "";
   background-image: url("../img/breadcrumbs.svg");
   background-repeat: no-repeat;
