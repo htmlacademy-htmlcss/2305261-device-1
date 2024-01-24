@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles/styles.css" />
@@ -13,10 +14,7 @@
       </a>
       <form class="header-form" action="#!" method="post">
         <label class="visually-hidden" for="search">Поиск по сайту</label>
-        <input class="input-decoration" type="text" placeholder="Поиск по сайту"/>
-        <svg aria-hidden="true" class="navigation-icon" width="16" height="16">
-          <use href="img/find.svg#find"></use>
-        </svg>
+        <input class="input-decoration" type="text" placeholder="Поиск по сайту" />
         <button class="header-find" type="submit">Найти</button>
       </form>
       <ul class="header-list">
@@ -35,42 +33,42 @@
             <button class="popover-close-button button button-light">2
               <span class="visually-hidden">Закрыть</span>
             </button>
-              <ul class="cart-items-list">
-                <li class="cart-item">
-                  <img class="cart-item-image" src="img/amateur.jpg" width="39" height="43" alt="Черная селфи-палка с закрепленным телефоном">
-                  <p class="cart-item-title">Любительская селфи-палка</p>
-                  <button type="button" class="cart-item-button button">
-                    <svg aria-hidden="true" width="10" height="10">
-                      <use href="img/close.svg#close"></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="cart-item"><img class="cart-item-image" src="img/prof.jpg" width="39" height="43" alt="Черная селфи-палка с закрепленным телефоном">
-                  <p class="cart-item-title">Профессиональная селфи-палка</p>
-                  <button type="button" class="cart-item-button button">
-                    <svg aria-hidden="true" width="10" height="10">
-                      <use href="img/close.svg#close"></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="cart-item cart-content">
-                  <p class="cart-item-title cart-item-orders">Товаров: 2</p>
-                  <p class="cart-item-title cart-item-sum">Сумма: 2000 ₽</p>
-                </li>
-                <li class="cart-item">
-                  <button type="button" class="button-cart-open">
-                    <span class="cart-open-title">открыть корзину</span>
-                  </button>
-                </li>
-              </ul>
-            </div>
+            <ul class="cart-items-list">
+              <li class="cart-item">
+                <img class="cart-item-image" src="img/amateur.jpg" width="39" height="43" alt="Черная селфи-палка с закрепленным телефоном">
+                <p class="cart-item-title">Любительская селфи-палка</p>
+                <button type="button" class="cart-item-button button">
+                  <svg aria-hidden="true" width="10" height="10">
+                    <use href="img/close.svg#close"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cart-item"><img class="cart-item-image" src="img/prof.jpg" width="39" height="43" alt="Черная селфи-палка с закрепленным телефоном">
+                <p class="cart-item-title">Профессиональная селфи-палка</p>
+                <button type="button" class="cart-item-button button">
+                  <svg aria-hidden="true" width="10" height="10">
+                    <use href="img/close.svg#close"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="cart-item cart-content">
+                <p class="cart-item-title cart-item-orders">Товаров: 2</p>
+                <p class="cart-item-title cart-item-sum">Сумма: 2000 ₽</p>
+              </li>
+              <li class="cart-item">
+                <button type="button" class="button-cart-open">
+                  <span class="cart-open-title">открыть корзину</span>
+                </button>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
       <nav>
         <ul class="navigation-catalog">
           <li class="navigation-catalog-item">
             <a class="navigation-link navigation-link-icon" href="#!">Каталог товаров</a>
-            <!-- нужно ли обвернуть списки в див, чтобы получить 3 колонки? -->
+
             <ul class="navigation-catalog-list">
               <li class="navigation-catalog-item">
                 <a class="navigation-catalog-link" href="catalog.html">Виртуальная реальность</a>
@@ -111,7 +109,7 @@
     <!-- МЕЙН -->
     <main class="main-container">
       <!-- слайдер -->
-      <section class="gallery-orders container">
+      <section class="container">
         <div class="slider">
           <div class="slider-controls">
             <button class="slider-button" type="button">
@@ -198,29 +196,24 @@
         </div>
       </section>
       <!-- картинки товара -->
-      <section class="main-catalog container">
+      <section class="container">
         <ul class="main-catalog-list">
           <li class="main-catalog-item">
-            <a class="main-catalog-link" href="catalog.html">
-              <svg
+            <a class="main-catalog-link main-catalog-link-virtual" href="catalog.html">
+              <!-- <svg
                 aria-hidden="true"
                 class="main-catalog-item-background"
                 width="160"
                 height="160"
               >
                 <use href="img/virtual.svg#virtual"></use>
-              </svg>
+              </svg> -->
               Виртуальная реальность
             </a>
           </li>
           <li class="main-catalog-item">
             <a class="main-catalog-link" href="catalog.html">
-              <svg
-                aria-hidden="true"
-                class="main-catalog-item-background"
-                width="160"
-                height="160"
-              >
+              <svg aria-hidden="true" class="main-catalog-item-background" width="160" height="160">
                 <use href="img/monopod.svg#monopod"></use>
               </svg>
               Моноподы для селфи
@@ -228,12 +221,7 @@
           </li>
           <li class="main-catalog-item">
             <a class="main-catalog-link" href="catalog.html">
-              <svg
-                aria-hidden="true"
-                class="main-catalog-item-background"
-                width="160"
-                height="160"
-              >
+              <svg aria-hidden="true" class="main-catalog-item-background" width="160" height="160">
                 <use href="img/action.svg#action"></use>
               </svg>
               Экшн-камеры
@@ -241,12 +229,7 @@
           </li>
           <li class="main-catalog-item">
             <a class="main-catalog-link" href="catalog.html">
-              <svg
-                aria-hidden="true"
-                class="main-catalog-item-background"
-                width="160"
-                height="160"
-              >
+              <svg aria-hidden="true" class="main-catalog-item-background" width="160" height="160">
                 <use href="img/fitness.svg#fitness"></use>
               </svg>
               Фитнес-браслеты
@@ -254,12 +237,7 @@
           </li>
           <li class="main-catalog-item">
             <a class="main-catalog-link" href="catalog.html">
-              <svg
-                aria-hidden="true"
-                class="main-catalog-item-background"
-                width="160"
-                height="160"
-              >
+              <svg aria-hidden="true" class="main-catalog-item-background" width="160" height="160">
                 <use href="img/clock.svg#clock"></use>
               </svg>
               Умные часы
@@ -267,12 +245,7 @@
           </li>
           <li class="main-catalog-item">
             <a class="main-catalog-link" href="catalog.html">
-              <svg
-                aria-hidden="true"
-                class="main-catalog-item-background"
-                width="160"
-                height="160"
-              >
+              <svg aria-hidden="true" class="main-catalog-item-background" width="160" height="160">
                 <use href="img/quadrocopter.svg#quadrocopter"></use>
               </svg>
               Квадрокоптеры
@@ -344,9 +317,7 @@
             <li class="content-item">СДИК</li>
             <li class="content-item">ТоксБерри</li>
           </ul>
-          <a class="content-link button button-line" href="#!"
-            >подробнее о нас</a
-          >
+          <a class="content-link button button-line" href="#!">подробнее о нас</a>
         </section>
         <section class="info-content-line">
           <h2 class="title">Контакты</h2>
@@ -380,7 +351,7 @@
 
           <form class="newsletter-form newsletter-form-wrap" action="https://htmlacademy.ru" method="post">
             <label class="visually-hidden" for="newsletter-email">Ваш e-mail</label>
-            <input class="input-mailing" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required/>
+            <input class="input-mailing" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required />
             <button class="button newsletter-button" type="submit">подписаться</button>
           </form>
           <p class="text newsletter-text-icon">Это бесплатно</p>
@@ -439,4 +410,5 @@
       </div>
     </footer>
   </body>
+
 </html>

@@ -130,6 +130,7 @@ body {
   grid-column: 1/-1;
   justify-self: start;
 }
+
 /* чтобы не выделялся последний элеммент по логике мне нужно написать
 :not(:last-child)
 .breadcrumbs-link:not(:last-child):hover
@@ -165,13 +166,18 @@ body {
   border: 2px solid #000000;
   background: transparent;
   padding-left: 48px;
+  position: relative;
 }
 
-.navigation-icon {
+.header-form::before {
+  content: "";
+  background-image: url("../img/find.svg");
+  width: 16px;
+  height: 16px;
   position: absolute;
-  right: auto;
-  left: 16px;
-  margin: auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .header-find {
@@ -198,7 +204,8 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.header-find:focus-visible {
+.header-find:focus-visible,
+.input-decoration:focus-visible {
   outline: 2px solid #af4fff;
 }
 
@@ -307,6 +314,7 @@ body {
 .cart-items-list {
   padding: 0;
 }
+
 /* так интересно, ошибочно не написала у 60 px и вроде как все на своих местах.
 только дописываю  - все ломается. что исправить? */
 .cart-item {
@@ -331,6 +339,7 @@ body {
   grid-row: 1 / 4;
   grid-column: 3 / 5;
 }
+
 /* тут у меня получается лишний бордер у последних двух элементов. как убрать? */
 .cart-item + .cart-item {
   margin-top: 20px;
@@ -399,15 +408,18 @@ body {
   opacity: 1;
 }
 
-.navigation-link:active {
+.navigation-link:active,
+.navigation-catalog-link:active {
   opacity: 0.3;
 }
 
-.navigation-link:focus-visible {
+.navigation-link:focus-visible,
+.navigation-catalog-link:focus-visible {
   outline: 2px solid #af4fff;
 }
 
-.navigation-link-header:hover {
+.navigation-link-header:hover,
+.navigation-catalog-link:hover {
   opacity: 0.6;
 }
 
@@ -462,10 +474,15 @@ body {
   list-style-type: none;
 }
 
+.main-container {
+  display: grid;
+  gap: 70px;
+}
+
 .slider {
-  margin-bottom: 70px;
   position: relative;
 }
+
 /* вот тут понимаю, что стрелки встают по центру блока slider,
  а как привязать их к середине каждой картинки - не догоняю. делаю flex как в барбершопе,
   но стрелки не разбегаются  */
@@ -582,7 +599,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  margin-bottom: 70px;
 }
 
 .main-catalog-link {
@@ -595,11 +611,21 @@ body {
   text-align: center;
   letter-spacing: -0.02em;
   display: block;
+  padding-left: 44px;
+  background-repeat: no-repeat;
+  background-size: 160px 160px;
+  background-position: center left 20px;
+  position: relative;
 }
 
-.main-catalog-item-background {
+.main-catalog-link-virtual {
+  background-image: url("../img/virtual.svg");
+}
+
+Не знаю как тут надо делать...
+.main-catalog-item {
   background-color: #ffe17f;
-  width: 100%;
+
 }
 
 .main-catalog-link:hover svg {
@@ -671,7 +697,6 @@ body {
   background-color: #f0f0f0;
   position: relative;
   display: block;
-  margin: 70px auto;
 }
 
 .delivery-button::before {
@@ -780,6 +805,7 @@ body {
   position: relative;
   padding-left: 30px;
 }
+
 /* тут получается наложение двух стилей кнопок */
 .newsletter-button {
   border: 3px solid #c4c4c4;
@@ -920,15 +946,6 @@ body {
   grid-column: 3/4;
   grid-row: 4/5;
 }
-/* Не видно картинки  */
-.htmlacademy-link-wrap::before {
-  content: "";
-  display: inline-block;
-  width: 115px;
-  height: 33px;
-  mask: url("img/logo-htmlacademy.svg") no-repeat center / contain;
-  background: #000000;
-}
 
 .breadcrumbs {
   padding: 0 21px 35px 60px;
@@ -954,6 +971,7 @@ body {
   font-size: 16px;
   line-height: 20px;
 }
+
 .breadcrumbs-item {
   position: relative;
   margin-right: 32px;
@@ -984,6 +1002,7 @@ body {
   padding: 0;
   border: none;
 }
+
 .range-scale {
   position: relative;
   width: 200px;
